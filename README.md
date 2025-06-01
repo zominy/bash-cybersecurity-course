@@ -1,4 +1,4 @@
-# 💲Bash for Cybersecurity: YouTube Course Companion
+# 🛡️ Bash for Cybersecurity: YouTube Course Companion
 
 Welcome! This is the official GitHub repo for my YouTube course on Bash scripting for cybersecurity.
 
