@@ -21,3 +21,6 @@ Each module has:
 - [LinkedIn](https://www.linkedin.com/in/max-zominy-85ba92310/)
 
 This project is free and open to all learners!
+
+---
+📄 This course is licensed under the [Creative Commons BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
