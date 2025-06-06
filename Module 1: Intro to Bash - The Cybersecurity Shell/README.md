@@ -13,10 +13,10 @@ This module teaches basic commands as it aims just to try and get you comfortabl
    View all commands used in this lab with explanations of what they do.
    This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
 
-3. [🎓 Tutorial](./tutorials.md)  
+3. [🎓Tutorial](./tutorials.md)  
    Documentation-style write up of the lab and how to do it if you'd like to do it in your own time.
 
-5. [⚠️ Possible errors and how to fix them](./errors.md)  
+5. [⚠Possible errors and how to fix them](./errors.md)  
    A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
 ---
