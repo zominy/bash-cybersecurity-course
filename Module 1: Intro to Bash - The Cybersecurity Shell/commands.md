@@ -150,43 +150,83 @@ maxz@zom:~/dira/dirc/dird$ cd ../../dire
 
 maxz@zom:~/dira/dire$ 
 
+As you can see, we go up twice to dira, then into dire as dire is a subdirectory of dira.
 
+## mkdir / rmdir
 
+Explanation: 'mkdir' stands for 'make directory'. It a simple command where you can enter: mkdir 'name of directory' and it will create a new directory under your current directory.
 
+Example: 
 
+maxz@zom:~/Downloads$ ls
 
+dirlist1.txt 
+dirlist2.txt
 
-  
+maxz@zom:~/Downloads$ mkdir DownloadsNEW
 
-pwd        # Print working directory
-ls         # List directory contents
-cd         # Change directory
-echo       # Output text
-clear      # Clear terminal
-whoami     # Current user
-; && ||    # Combine commands
-🧪 Lab:
-bash
-Copy
-Edit
-# Open terminal and try the following:
-pwd
-ls
-cd /etc
-ls -l
-whoami
+maxz@zom:~/Downloads$ ls
 
-# Combine commands:
-cd /var/log; ls
-cd /tmp && echo "We made it!" || echo "Failed to change directory"
+dirlist1.txt 
+dirlist2.txt 
+DownloadsNEW
 
-# Shortcuts:
-# Ctrl + C    → Cancel current process
-# Ctrl + L    → Clear screen
-# Tab         → Auto-complete commands
-🏋️ Practice:
-Navigate to /home and list its contents.
+maxz@zom:~/Downloads$ rmdir DownloadsNEW
 
-Combine: cd /var && pwd && ls
+maxz@zom:~/Downloads$ ls
 
-Try breaking a command and fixing it with Ctrl+C.
+dirlist1.txt  
+dirlist2.txt
+
+maxz@zom:~/Downloads$
+
+We begin in the Downloads directory. Then enter 'ls' to see the contents of that directory.
+As can be seen, there is only two text files.
+
+Next, I enter 'mkdir DownloadsNEW' and once I re-list the Downloads directory, you can see the new directory I created called DownloadsNEW. Then, to remove this directory I use 'rmdir' which removes the directory.
+
+Note: rmdir only works if the directory is empty, you will have to use 'rm -rf' if the directory is not empty. Be careful though becuase that command incinerates anything it's used on and it does not come back!
+
+## nano
+
+Explanation: nano is a command line text editor which is very simple and fast to use. It can create or edit text files.
+
+If you type 'nano' followed by an existing file name in that directory then you edit that file. If the file does not exist it creates a new file and places you in the text editor. It is pretty good for scripting and what will be used in this course due to it's simplicity and speed in comparison to the vi editor which can feel janky especially to new users.
+
+## echo
+
+Explanation: echo is used to print text or variables to the terminal.
+
+### For example:
+
+maxz@zom:~$ echo I am a terminal
+
+I am a terminal
+
+maxz@zom:~$ 
+
+### Example 2 (Variables):
+
+Here is a simple script (First 'nano echo.sh' to make the file.):
+
+#!/bin/bash - This is a shebang (cool name), this must be always included as the first thing in your script to make it executable.
+
+name="Max" - Stores Max under the variable 'name'
+
+echo "Hello, $name" - Basically saying to print Hello, Max. If the variable 'name' was assigned a different string the answer wouldnt be the same.
+
+Let's run the script
+
+maxz@zom:~$ ./echo.sh
+
+Hello, Max
+
+Cool!
+
+## Clear
+
+Explanation: Using the clear command just clears the current terminal. Pretty handy if things are messy.
+
+## whoami
+
+Explanation: 'whoami' is a simple command that prints the username of the current user logged into the shell. In cybersecurity, you can use 'sudo whoami' to determine whether you are the root user when penetrating systems. Pretty handy. 
