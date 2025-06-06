@@ -1,4 +1,4 @@
-# 🧰 Module 1: Intro to Bash - The Cybersecurity Shell
+# 🧰 Module 1: Intro to Bash - The Cybersecurity Shell 🟩
 
 The documents in this folder are here to accompany the module 1 intro to bash.
 
