@@ -13,7 +13,7 @@ Each module has:
 - `errors.md` – common mistakes or errors to watch out for!
 
 ### Modules:
-- [Module 1: Intro to Bash - The Cybersecurity Shell](modules/01)
+- [Module 1: Intro to Bash - The Cybersecurity Shell](Module1-Intro-to-Bash)
 - ... (coming soon...)
 
 ## 📬 Contact
