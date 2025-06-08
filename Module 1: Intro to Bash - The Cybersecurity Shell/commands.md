@@ -195,7 +195,89 @@ Explanation: Using the clear command just clears the current terminal. It is use
 ## whoami 🙋‍♂️
 Explanation: 'whoami' is a simple command that prints the username of the current user logged into the shell. To verify elevated privileges, use 'sudo whoami' and if the output is 'root' you are operating with administrative privileges.
 
+## Combining Commands 🔗🧩
 
+Explanation: In the Linux terminal, you can combine different commands together for efficiency reasons. Here is how to do it:
+### Important Concepts:
+
+&& - Logical AND - Run the next process IF the first is successful.
+
+|| - Logical OR - Run the second command ONLY IF the first command fails.
+
+; - Command Seperator - This is to seperate commands. Commands will run regardless of success or fail using this method.
+
+### Example of AND operator:
+```bash
+maxz@zom:~$ cd Downloads && pwd && echo I am in the Downloads folder
+/home/maxz/Downloads
+I am in the Downloads folder
+maxz@zom:~/Downloads$ 
+```
+Breakdown:
+
+Changes into the Downloads directory - Sucessful
+
+Prints the working directory - Successful
+
+Echos 'I am in the Downloads folder' - Successful
+
+### Example of the OR operator:
+```bash
+maxz@zom:~/Downloads$ cd External || echo When the previous command fails, the next one is executed.
+bash: cd: External: No such file or directory
+When the previous command fails, the next one is executed.
+maxz@zom:~/Downloads$ 
+```
+Breakdown:
+
+Changes into the 'External' directory - Fails (Does not exist)
+
+Echos 'When the previous command fails, the next one is executed.' - Successful
+
+Note: It executes the second command becuase the first failed.
+
+### Example of the Command Seperator:
+```bash
+maxz@zom:~/Downloads$ cd; echo back home; mkdir NEW; cd NEW
+back home
+maxz@zom:~/NEW$ 
+```
+Breakdown:
+
+Changes to the home directory
+
+Echos 'back home'
+
+Makes a new directory called 'NEW'
+
+Changes into the 'NEW' directory
+
+Note: This all executes regardless of success or fail. However, if a command such as 'cd directory_name' is executed and that directory does not exist, then the command won't work.
+
+### Combining Operators:
+```bash
+maxz@zom:~/NEW$ cd && echo Hello World && cd External || mkdir NEW2; cd NEW2
+Hello World
+bash: cd: External: No such file or directory
+maxz@zom:~/NEW2$ 
+```
+Breakdown:
+
+Changes to the home directory - Successful
+
+Echos 'Hello World' - Successful
+
+Changes into the 'External' directory - Fails
+
+Makes a new directory called 'NEW2' - Successful
+
+Changes into the 'NEW2' directory - Successful
+
+## Shortcuts ⌨️⚡
+
+### Ctrl + C    → Cancel current process
+### Ctrl + L    → Clear screen
+### Tab         → Auto-complete commands
 
 
 
