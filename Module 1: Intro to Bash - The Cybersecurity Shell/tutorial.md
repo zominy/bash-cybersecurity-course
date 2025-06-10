@@ -16,7 +16,16 @@
 
 In this tutorial, I cover the basics of Bash scripting and command line usage from the module 1 video. You can use this to read up on the material or go through the labs in your own time.
 
+### 🎯 Aims
+### By the end of this module, you should be able to:
 
+Use simple commands such as ls, pwd, echo, nano, and cd with knowledge of how they work.
+
+To be able to string commands together.
+
+To have knowledge of shortcuts and what they do.
+
+### Note: Please check out the [command file](commands.md) for help if you are struggling to understand any concepts.
 
 ---
 
