@@ -9,7 +9,7 @@ Welcome! This is the official GitHub repo for my YouTube course on Bash scriptin
 
 Each module has:
 - `commands.md` – all commands used, with explanations as to what they do.
-- `tutorials.md` – tutorials witten by me that explain the modules/labs that can be followed in your own time.
+- `tutorials.md` – documentation of each of the videos, that essentailly walk you through the material.
 - `errors.md` – common mistakes or errors to watch out for!
 
 ### Modules:
