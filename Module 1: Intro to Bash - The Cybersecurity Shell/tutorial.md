@@ -22,16 +22,16 @@ To have knowledge of shortcuts and what they do.
 
 ## Setup ⚙️🔧
 
-The setup for this lab is minimal. Download a virtual machine software. For this course, I used VMware; I just prefer it, but whichever software you use does not really matter.
+The setup for this lab is minimal. Download a virtual machine software. For this course, I used VMware; I just prefer it... but whichever software you use does not really matter.
 
-If you are unable to get VMware, I recommend Virtual Box instead. Both are great virtual machine softwares:
+If you are unable to get VMware, I recommend Virtual Box instead. Both are great virtualisation software options:
 
 ### Installation Resources For Virtualisation Software
 
 - [VirtualBox Official Site](https://www.virtualbox.org/wiki/Downloads)
 - [VMware Official Site](https://www.vmware.com/products/workstation-player.html)
 
-In addition to this, here is guides on how to install the OS that I will be using for this course (Debian):
+In addition to this, here are guides on how to install the OS that I will be using for this course (Debian):
 
 ### Public Guides For Installing Debian
 
@@ -46,7 +46,7 @@ With this, we are ready to go.
 
 The video first begins with a small introduction to the Debian GUI. Then we go into activities > 9 dots > terminal.
 
-This is the Command-Line Interface where this course will take place.
+This is the Command-Line Interface (CLI), where all the course work will take place.
 
 The first command entered is:
 
@@ -111,25 +111,25 @@ max@maxz:~$
 ```
 Here is a breakdown of what the random numbers, letters, and names actually mean:
 
-d = directory (Specifies that it is a directory)
+`d` — indicates it's a directory
 
-rwx = owner has read, write, execute (These are privileges meaning that the owner (me) can read, write to, and execute this directory)
+`rwx` — the owner has read, write, and execute permissions
 
-r-x = group has read, execute (I am also the group so the same applies)
+`r-x` — the group can read and execute, but not write
 
-r-x = others have read, execute
+`r-x` — others can read and execute
 
-2 — Number of hard links (Hard links are just different names for the same file. If you delete one name, the file still exists under the other names)
+`2` — number of hard links (alternate names for the same file)
 
-max — Owner name
+`max` — owner
 
-max — Group name
+`max` — group
 
-4096 — File size in bytes (for directories, often a fixed size like 4096)
+`4096` — file size in bytes (directories often use 4096 bytes)
 
-Jun 8 19:51 — Last modification date and time
+`Jun 8 19:51` — last modification time
 
-Example: 'Desktop' — File/directory name
+`Desktop` — file/directory name
 
 ---
 ### Part 3 📂3️⃣➡️
@@ -154,7 +154,7 @@ Instead of:
 ```bash
 max@maxz:~$
 ```
-Signifying that we are not in the /etc directory. If this does not work then you will be met with an error. If you encounter errors in this lab, please check out the [file for any errors and how to fix them](errors.md).
+Signifying that we are now inside the /etc directory. If this does not work then you will be met with an error. If you encounter errors in this lab, please check out the [file for any errors and how to fix them](errors.md).
 
 This is then followed by another demonstration of the 'ls -l' command. It looks like this:
 
@@ -297,11 +297,11 @@ Now that we have a grasp on basic commands, we can begin stringing them together
 Explanation: In the Linux terminal, you can combine different commands together for efficiency reasons. Here is how to do it:
 
 Important Concepts:
-&& - Logical AND - Run the next process IF the first is successful.
+&& - Logical AND - Run the next process ONLY IF the previous is successful.
 
-|| - Logical OR - Run the second command ONLY IF the first command fails.
+|| - Logical OR - Run the second command ONLY IF the previous command fails.
 
-; - Command Seperator - This is to seperate commands. Commands will run regardless of success or fail using this method.
+; - Command Separator - This is to separate commands. Runs all commands and does not care if the previous command is successful or fails.
 
 ### Example of AND operator from video:
 ```bash
@@ -336,7 +336,7 @@ So, echo "It worked" runs because cd failed.
 
 Result: You see the error message from cd, then "It worked" is printed.
 
-### Example of the Command Seperator from video:
+### Example of the Command Separator from video:
 ```bash
 max@maxz:~$ cd /tmp; ls; pwd
 systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-colord.service-QjnKX5
@@ -410,7 +410,7 @@ Begin by typing:
 ```
 ping google.com
 ```
-And enter this into the terminal. It will proceed to ping google indefinetly. To cancel this, simply press crtl + c. This keybind cancels processes.
+And enter this into the terminal. It will proceed to ping google indefinitely. To cancel this, simply press Crtl + C. This keybind cancels processes.
 
 Next, type:
 ```
@@ -418,7 +418,7 @@ cd Downl
 ```
 Then press the tab key and it will auto-complete the command you are typing.
 
-Lastly, press crtl + l to clear the terminal. This is useful to clear the clutter without halting any processes or deleting anything.
+Lastly, press Crtl + L to clear the terminal. This is useful to clear the clutter without halting any processes or deleting anything.
 
 ---
 
@@ -426,30 +426,30 @@ Lastly, press crtl + l to clear the terminal. This is useful to clear the clutte
 
 To summarise, this lab introduces basic Linux terminal commands using the Debian GUI. It begins with opening the terminal and exploring the Command-Line Interface (CLI).
 
-pwd: Prints the current directory path.
+`pwd`: Prints the current directory path.
 
-ls & ls -l: Lists files and directories. -l provides detailed information like permissions, owner, size, etc.
+`ls` & `ls -l`: Lists files and directories. -l provides detailed information like permissions, owner, size, etc.
 
-cd: Changes the current directory (e.g., cd /etc). Using cd alone returns you to the home directory.
+`cd`: Changes the current directory (e.g., cd /etc). Using cd alone returns you to the home directory.
 
-mkdir & rmdir: Creates and removes directories. rmdir only works on empty directories.
+`mkdir` & `rmdir`: Creates and removes directories. rmdir only works on empty directories.
 
-echo & file redirection: echo "Hello" > file1 creates a new file. nano opens files for editing, and rm deletes them.
+`echo` & file redirection: echo "Hello" > file1 creates a new file. nano opens files for editing, and rm deletes them.
 
 ### Command chaining:
 
-&&: Runs the next command only if the previous one succeeds.
+`&&`: Runs the next command only if the previous one succeeds.
 
-||: Runs the next command only if the previous one fails.
+`||`: Runs the next command only if the previous one fails.
 
-;: Runs all commands in sequence regardless of success/failure.
+`;`: Runs all commands in sequence regardless of success/failure.
 
 ### Keyboard shortcuts:
 
-Ctrl + C: Cancels a running process.
+`Ctrl + C`: Cancels a running process.
 
-Tab: Auto-completes commands or paths.
+`Tab`: Auto-completes commands or paths.
 
-Ctrl + L: Clears the terminal screen.
+`Ctrl + L`: Clears the terminal screen.
 
 ### By the end of the lab, you’ll have navigated directories, created/deleted files and folders, and combined commands efficiently in Linux. 📁🛠️🔗
