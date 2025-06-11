@@ -32,4 +32,4 @@ By the end of this module, you should be able to:
 
 ## 🚀 Next Up
 
-Head to [Module 2: Navigating like a Pro – File Systems & Permissions](../Module%202/README.md) to learn about filesystems & permissions!
+Head to [Module 2: Navigating Like a Pro – Filesystems & Permissions](../Module%202%3A%20Navigating%20Like%20a%20Pro%20-%20Filesystems%20%26%20Permissions/) to learn about filesystems & permissions!
