@@ -309,6 +309,15 @@ max@maxz:~$ cd /tmp && echo "Success"
 Success
 max@maxz:/tmp$ 
 ```
+What's happening:
+
+cd /tmp — Changes to the /tmp directory.
+
+&& — Runs the next command only if the previous one succeeds.
+
+echo "Success" — Prints "Success".
+
+Since cd /tmp was successful, echo "Success" runs.
 
 ### Example of the OR operator from video:
 ```bash
@@ -317,6 +326,15 @@ bash: cd: /notarealplace: No such file or directory
 It worked
 max@maxz:~$ 
 ```
+What’s happening:
+
+cd /notarealplace tries to change into a directory that doesn’t exist. It fails.
+
+|| means “if the previous command fails, then run the next command.”
+
+So, echo "It worked" runs because cd failed.
+
+Result: You see the error message from cd, then "It worked" is printed.
 
 ### Example of the Command Seperator from video:
 ```bash
@@ -337,8 +355,101 @@ vmware-root_572-2999067484
 /tmp
 max@maxz:/tmp$ 
 ```
+What's happening:
+```
+cd /tmp;
+```
+Changes the current directory to /tmp.
+```
+ls;
+```
+Lists all files and directories in /tmp.
+```
+pwd
+```
+Prints the current working directory — /tmp.
+
+The ; lets you run multiple commands in sequence, regardless of whether the previous ones succeed.
+
+So this line navigates to /tmp, shows its contents, and confirms you're in /tmp.
 
 Combining Operators From Video:
 ```bash
+max@maxz:~$ cd Downloads; cd /notarealplace || echo "Success Again" && cd && pwd
+bash: cd: /notarealplace: No such file or directory
+Success Again
+/home/max
+max@maxz:~$ 
+```
+What's happening:
+```
+cd Downloads;
+```
+Changes to the Downloads directory.
+```
+cd /notarealplace
+```
+Fails (directory doesn’t exist), so the next part runs because of ||.
+```
+|| echo "Success Again"
+```
+Runs because the previous cd failed. So it prints: Success Again.
+```
+&& cd && pwd
+```
+This runs only if echo "Success Again" succeeds — which it does.
 
+cd — With no argument, it goes to the home directory.
 
+pwd — Prints /home/max.
+
+---
+Part 6 6️⃣⌨️⚡
+
+Begin by typing:
+```
+ping google.com
+```
+And enter this into the terminal. It will proceed to ping google indefinetly. To cancel this, simply press crtl + c. This keybind cancels processes.
+
+Next, type:
+```
+cd Downl
+```
+Then press the tab key and it will auto-complete the command you are typing.
+
+Lastly, press crtl + l to clear the terminal. This is useful to clear the clutter without halting any processes or deleting anything.
+
+---
+
+### Congratulations on Completing Module 1 🎉👏
+
+To summarise, this lab introduces basic Linux terminal commands using the Debian GUI. It begins with opening the terminal and exploring the Command-Line Interface (CLI).
+
+pwd: Prints the current directory path.
+
+ls & ls -l: Lists files and directories. -l provides detailed information like permissions, owner, size, etc.
+
+cd: Changes the current directory (e.g., cd /etc). Using cd alone returns you to the home directory.
+
+mkdir & rmdir: Creates and removes directories. rmdir only works on empty directories.
+
+echo & file redirection: echo "Hello" > file1 creates a new file. nano opens files for editing, and rm deletes them.
+
+### Command chaining:
+
+&&: Runs the next command only if the previous one succeeds.
+
+||: Runs the next command only if the previous one fails.
+
+;: Runs all commands in sequence regardless of success/failure.
+
+### Keyboard shortcuts:
+
+Ctrl + C: Cancels a running process.
+
+Tab: Auto-completes commands or paths.
+
+Ctrl + L: Clears the terminal screen.
+
+### By the end of the lab, you’ll have navigated directories, created/deleted files and folders, and combined commands efficiently in Linux. 📁🛠️🔗
