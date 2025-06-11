@@ -198,3 +198,147 @@ su -
 ```
 ---
 ### Part 4 📂4️⃣➕✏️🗣️
+
+Next, we return to the home directory by simply entering 'cd'. This returns us to the home directory regardless of where we are in the filesystem:
+
+```bash
+max@maxz:/etc$ cd
+max@maxz:~$ 
+```
+
+Then we use the 'mkdir' command to create a new directory like so:
+
+```bash
+max@maxz:~$ mkdir lab1
+max@maxz:~$ ls
+Desktop  Documents  Downloads  lab1  Music  Pictures  Public  Templates  Videos
+max@maxz:~$ 
+```
+Explanation: 'mkdir' stands for 'make directory'. It's a simple command where you can enter: mkdir 'name of directory' and it will create a new directory under your current directory.
+
+We then enter the 'ls' command to re-list the contents of the home directory to see the new subdirectory that we have created.
+
+After that, we then make a new file using the echo command as such:
+
+```bash
+max@maxz:~$ cd lab1
+max@maxz:~/lab1$ echo "Hello World" > file1
+max@maxz:~/lab1$ nano file1
+max@maxz:~/lab1$ rm file1
+max@maxz:~/lab1$ ls
+max@maxz:~/lab1$ pwd
+/home/max/lab1
+max@maxz:~/lab1$ cd ..
+max@maxz:~$ pwd
+/home/max
+max@maxz:~$ 
+```
+Explanation:
+```bash
+max@maxz:~$ cd lab1
+```
+Changes directory to lab1 inside your home directory.
+```bash
+max@maxz:~$ echo "Hello World"
+```
+Prints the text "Hello World" to the terminal (standard output).
+```
+'>' (redirect operator)
+Takes the output of the command on the left (echo "Hello World") and writes it into the file on the right (file1).
+```
+If file1 doesn’t exist, it creates it.
+
+If file1 exists, it overwrites it.
+```bash
+max@maxz:~$ nano file1
+```
+Opens the file file1 in the nano text editor — a simple command-line editor where you can read or modify the file content.
+```bash
+max@maxz:~$ rm file1
+```
+Removes (deletes) the file named file1 from the filesystem. After this, the file is gone unless you have backups.
+```bash
+max@maxz:~/lab1$ ls
+```
+Lists the contents of lab1 (empty now because you deleted file1).
+```bash
+max@maxz:~/lab1$ pwd
+```
+Prints the current directory path: /home/max/lab1.
+```bash
+max@maxz:~/lab1$ cd ..
+```
+Puts you up one directory - this is expanded upon in module 2.
+```bash
+max@maxz:~$ pwd
+```
+Prints the current directory path: /home/max.
+
+---
+
+Once back in the home directory, we can then remove the 'lab1' directory:
+
+```bash
+max@maxz:~$ rmdir lab1
+max@maxz:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+max@maxz:~$ 
+```
+
+The 'rmdir' command works the same as the mkdir command in terms of structure but removes the directory.
+
+Note: In order for rmdir to work, the directory must be empty. If the directory contains anything then you must use 'rm -rf directory_name' but be careful since this is a very powerful command.
+
+---
+### Part 5 5️⃣🔗🧵
+
+Now that we have a grasp on basic commands, we can begin stringing them together.
+
+Explanation: In the Linux terminal, you can combine different commands together for efficiency reasons. Here is how to do it:
+
+Important Concepts:
+&& - Logical AND - Run the next process IF the first is successful.
+
+|| - Logical OR - Run the second command ONLY IF the first command fails.
+
+; - Command Seperator - This is to seperate commands. Commands will run regardless of success or fail using this method.
+
+### Example of AND operator from video:
+```bash
+max@maxz:~$ cd /tmp && echo "Success"
+Success
+max@maxz:/tmp$ 
+```
+
+### Example of the OR operator from video:
+```bash
+max@maxz:~$ cd /notarealplace || echo "It worked"
+bash: cd: /notarealplace: No such file or directory
+It worked
+max@maxz:~$ 
+```
+
+### Example of the Command Seperator from video:
+```bash
+max@maxz:~$ cd /tmp; ls; pwd
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-colord.service-QjnKX5
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-geoclue.service-Xw1Xr1
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-low-memory-monitor.service-eTo839
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-ModemManager.service-MHtRcc
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-power-profiles-daemon.service-4dg9Aj
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-switcheroo-control.service-TWEwy4
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-systemd-logind.service-vuOmCa
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-systemd-timesyncd.service-cLUFt8
+systemd-private-d2e1e9127f1045a8afaaab5562fedbd8-upower.service-rfqN10
+tracker-extract-3-files.1000
+tracker-extract-3-files.111
+VMwareDnD
+vmware-root_572-2999067484
+/tmp
+max@maxz:/tmp$ 
+```
+
+Combining Operators From Video:
+```bash
+
+
