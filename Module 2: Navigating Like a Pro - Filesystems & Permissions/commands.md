@@ -143,11 +143,28 @@ This error will arise due to you not running the command with the necessary priv
 
 Explanation: Lists files in a folder, with human-friendly sizes (MB/KB). The `-l` gives more detail, and `-h` makes it readable.
 
+Example:
+```bash
+maxz@zom:~$ ls -lh dirlist1.txt
+-rw-r--r-- 1 maxz maxz 1.8K May 11 07:18 dirlist1.txt
+```
+
+`ls -l` gives you a detailed list of files, but the file sizes are in raw bytes, which can be difficult to read as a human; for example, `1843` instead of `1.8K`.
+
+`ls -lh` adds the `-h` for “human-readable,” so sizes show up as K, M, G, etc.
+
+So essentially the same info but easier to read.
 
 ## touch 🆕📄
 
 Explanation: Creates a new empty file, or updates the “last touched” time of an existing one. Think of it as giving a file a gentle nudge.
 
+Example:
+```bash
+maxz@zom:~$ touch new_file
+```
+
+This file is completely blank, you can use `nano` or `vi` to edit it, regarding your preference.
 
 
 ## chmod 🔐🛠️
