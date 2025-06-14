@@ -2,7 +2,7 @@
 
 Welcome! This is the official GitHub repo for my YouTube course on Bash scripting for cybersecurity.
 
-🎥 Watch the series: *(link coming soon)*  
+🎥 Watch the series: [Watch it here](https://www.youtube.com/watch?v=6QyjFj5dRVE&list=PLGPhFvIx6g8hdTP3fj2GV7qeISOUjYknL)
 📂 This repo contains all the scripts, commands, and error fixes used in each episode.
 
 ## 📘 Course Modules
