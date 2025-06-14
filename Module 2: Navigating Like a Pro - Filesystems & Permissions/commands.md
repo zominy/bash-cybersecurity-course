@@ -269,13 +269,46 @@ max@maxz:~$
 
 ```
 
+Tree lists a directory called chess and all the files inside so that we can see what's there.
 
+The find command is then used with wildcards like `*` which basically means 'anything' and specific patterns to match file names. For example, `*.txt` grabs everything that ends in .txt, while `file2*` finds anything that starts with file2. The pattern `*1*` matches anything with a 1 anywhere in the name.
+
+This is a fast way to search for groups of files by name, type, or number without needing to look through each one manually.
 
 ## find 🔍📂
 
-Explanation: Searches for files and folders based on different criteria (name, size, permissions, etc.).
+Explanation: Searches for files and folders based on different criteria.
 
+Example:
+```bash
+max@maxz:~$ find ./chess -name "*.txt"
+./chess/file2.txt
+./chess/file.txt
+./chess/file1.txt
+max@maxz:~$ find ./chess -name "*.conf"
+./chess/file.conf
+./chess/file2.conf
+./chess/file1.conf
+max@maxz:~$ find ./chess -name "*1*"
+./chess/file1.conf
+./chess/file1.txt
+max@maxz:~$ find ./chess -name "file2*"
+./chess/file2.txt
+./chess/file2.conf
+max@maxz:~$
+```
 
+In the example, find looks in the chess folder for files that match different patterns:
+
+`*.txt` finds all files ending in .txt
+
+`*.conf` finds all config files
+
+`*1*` finds anything with a 1 in the name
+
+`file2*` finds files that start with file2
+
+It saves time and helps you locate exactly what you need.
 
 ## find / -type f -perm -o=w 2>/dev/null 🚨📝
 
