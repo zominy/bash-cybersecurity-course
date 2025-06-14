@@ -171,16 +171,103 @@ This file is completely blank, you can use `nano` or `vi` to edit it, regarding 
 
 Explanation: Changes file or folder permissions. Such as who can read, write, or run (execute) it.
 
+Here is an example:
+```bash
+max@maxz:~$ touch newfile1 && ls -l newfile1
+-rw-r--r-- 1 max max 0 Jun 14 22:14 newfile1
+max@maxz:~$ chmod 100 newfile1
+max@maxz:~$ ls -l newfile1
+---x------ 1 max max 0 Jun 14 22:14 newfile1
+max@maxz:~$ chmod 300 newfile1; ls -l newfile1
+--wx------ 1 max max 0 Jun 14 22:14 newfile1
+max@maxz:~$ chmod 400 newfile1; ls -l newfile1
+-r-------- 1 max max 0 Jun 14 22:14 newfile1
+max@maxz:~$ chmod 700 newfile1; ls -l newfile1
+-rwx------ 1 max max 0 Jun 14 22:14 newfile1
+max@maxz:~$ 
+```
+
+We first begin by making an empty file and then getting a long listing of the new file. For this, we will be focussing on the `-rw-r--r--` section of the file since this is these are the permissions that we will be changing.
+
+It is important to note that `r` stands for read where we can read the contents of a file, `w` stands for write where we can write to a file, and `x` for execute where you can execute the file.
+
+The string of characters -rw-r--r-- breaks down into three sections that refer to different types of users. The first group of three letters applies to the owner of the file, the second group applies to the group associated with the file, and the third applies to others, which means everyone else essentially. In this case, the file starts with read and write permissions for the owner, read only for the group, and read only for others.
+
+Each permission type corresponds to a number:
+
+read (r) is worth 4
+
+write (w) is worth 2
+
+execute (x) is worth 1
+
+To set permissions, you add these values together. So if you want the owner to have read, write, and execute, you would add 4 + 2 + 1, giving you 7. If the group should only have read access, that’s 4. No permissions at all would be 0. That’s how you get numbers like 700, 400, or 100.
+
+Let’s look at the example. We start with default permissions: -rw-r--r--, which means the owner can read and write, and both the group and others can only read.
+
+When we run chmod 100 newfile1, we change the permission to ---x------. This means only the owner can execute the file, but no one else, including the group and others, has any access.
+
+With chmod 300 newfile1, the permissions become --wx------. Now the owner can write and execute, but still cannot read the file, and the group and others have no access.
+
+Then, chmod 400 newfile1 changes it to -r--------. This is read-only access for the owner.
+
+Finally, chmod 700 newfile1 gives full access to the owner — read, write, and execute — and no access for the group or others, shown as -rwx------.
+
+Understanding these numbers helps you control exactly who can do what with your files. It is a good habit to be deliberate about file permissions to keep your data secure.
+
 
 ## chown 👤🔑
 
 Explanation: Changes the owner of a file or folder. Useful if something’s owned by the wrong user and needs a change of hands.
 
+Example (Using file from chmod definition)
+```bash
+max@maxz:~$ sudo chown $USER:$USER newfile1
+[sudo] password for max: 
+max@maxz:~$ 
+```
+
+This command required sudo privileges and changes the owner to us. Lets break it down.
+
+`sudo` – Runs the command that follows with superuser privileges.
+`chown` – Stands for "change owner" and is used here to change the ownership of the file to me.
+`$USER:$USER` – This uses a shell variable (`$USER`) to insert the name of the current user. The first `$USER` sets the file’s owner, and the second `$USER` after the colon sets the group owner to the same user.
+`newfile1` – This is the name of the target file whose ownership is being changed to us.
 
 
 ## Wildcards 🌟🃏
 
-Explanation: Special characters (like * or ?) used to match filenames. For example, *.txt grabs all text files. Super useful for bulk stuff such as the /etc directory.
+Explanation: Using asterisks or question marks to match filenames. For example, *.txt grabs all text files. Super useful for bulk stuff such as the /etc directory.
+
+Example:
+```bash
+max@maxz:~$ tree chess
+chess
+├── file1.conf
+├── file1.txt
+├── file2.conf
+├── file2.txt
+├── file.conf
+└── file.txt
+
+1 directory, 6 files
+max@maxz:~$ find ./chess -name "*.txt"
+./chess/file2.txt
+./chess/file.txt
+./chess/file1.txt
+max@maxz:~$ find ./chess -name "*.conf"
+./chess/file.conf
+./chess/file2.conf
+./chess/file1.conf
+max@maxz:~$ find ./chess -name "*1*"
+./chess/file1.conf
+./chess/file1.txt
+max@maxz:~$ find ./chess -name "file2*"
+./chess/file2.txt
+./chess/file2.conf
+max@maxz:~$ 
+
+```
 
 
 
