@@ -190,9 +190,9 @@ Understanding these numbers helps you control exactly who can do what with your 
 
 Next we will change ownership of this file to ourselves. The file is already owned by us but this is under the assumption of where it would not be.
 
-From Video (Using file from chmod definition):
+From Video:
 ```bash
-max@maxz:~$ sudo chown $USER:$USER newfile1
+max@maxz:~$ sudo chown $USER:$USER newfile.txt
 [sudo] password for max: 
 max@maxz:~$ 
 ```
