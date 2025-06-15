@@ -144,3 +144,45 @@ Look at one of the files' file size section, notice it is now in a readable size
 
 ### Part 3 - File permissions & ownership 🔐👤📄
 
+Begin with `cd` to go back home and clear the terminal.
+
+We will be using a new command to create an emtpy file like so:
+```bash
+touch newfile.txt
+```
+This creates a new empty file, or updates the “last touched” time of an existing one. Think of it as giving a file a gentle nudge.
+
+Next, get a long listing of this file and examine the permissions section, specifically focussing on the `-rw-r--r--` section of the file since this is these are the permissions that we will be changing.
+
+It is important to note that `r` stands for read where we can read the contents of a file, `w` stands for write where we can write to a file, and `x` for execute where you can execute the file.
+
+The string of characters `-rw-r--r--` breaks down into three sections that refer to different types of users. The first group of three letters applies to the owner of the file, the second group applies to the group associated with the file, and the third applies to others, which means everyone else essentially. In this case, the file starts with read and write permissions for the owner, read only for the group, and read only for others.
+
+Next, enter:
+```bash
+chmod 700 newfile.txt
+```
+Get a long listing of this file too to see the permissions. Please split the 700 into three seperate digits where the first digit applies to the owner, the second digit to the group, and the third digit others (anyone else).
+
+Each permission type corresponds to a number:
+
+read (r) is worth 4
+
+write (w) is worth 2
+
+execute (x) is worth 1
+
+To set permissions, you add these values together. So if you want the owner to have read, write, and execute, you would add 4 + 2 + 1, giving you 7. If the group should only have read access, that’s 4. No permissions at all would be 0. That’s how you get numbers like 700, 400, or 100.
+
+Remember when we first listed the new file. We started with default permissions: `-rw-r--r--`, which means the owner can read and write, and both the group and others can only read.
+
+When we run chmod 100 newfile1, we change the permission to `---x------`. This means only the owner can execute the file, but no one else, including the group and others, has any access.
+
+With chmod 300 newfile1, the permissions become `--wx------`. Now the owner can write and execute, but still cannot read the file, and the group and others have no access.
+
+Then, chmod 400 newfile1 changes it to `-r--------`. This is read-only access for the owner.
+
+Finally, chmod 700 newfile1 gives full access to the owner — read, write, and execute — and no access for the group or others, shown as `-rwx------`.
+
+Understanding these numbers helps you control exactly who can do what with your files. It is a good habit to be deliberate about file permissions to keep your data secure.
+
