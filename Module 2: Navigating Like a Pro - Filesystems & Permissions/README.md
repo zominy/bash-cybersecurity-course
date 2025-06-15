@@ -27,7 +27,7 @@ By the end of this module, you should be able to:
 - Navigate the Linux filesystem with confidence
 - View and modify file permissions
 - Change file ownership
-- Use tools like `find` and `locate` to efficiently search for files.
+- Use tools like `find` to efficiently search for files.
 ---
 
 ## 🚀 Next Up
