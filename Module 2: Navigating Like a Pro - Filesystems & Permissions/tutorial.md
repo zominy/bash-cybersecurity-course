@@ -13,6 +13,10 @@ View and modify file permissions
 
 Change file ownership
 
-Use tools like find and locate to efficiently search for files.
+Use tools like find to efficiently search for files.
 
 ### Note: Please check out the [command file](commands.md) or [errors file](errors.md) for help if you are struggling to understand any concepts.
+
+## Module 2 Lab 🧪💻
+
+### Part 1 - Adding ourselves to the sudoers file 🧍🛡️
