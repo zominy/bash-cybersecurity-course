@@ -186,3 +186,28 @@ Finally, chmod 700 newfile1 gives full access to the owner — read, write, and 
 
 Understanding these numbers helps you control exactly who can do what with your files. It is a good habit to be deliberate about file permissions to keep your data secure.
 
+---
+
+Next we will change ownership of this file to ourselves. The file is already owned by us but this is under the assumption of where it would not be.
+
+From Video (Using file from chmod definition):
+```bash
+max@maxz:~$ sudo chown $USER:$USER newfile1
+[sudo] password for max: 
+max@maxz:~$ 
+```
+
+This command required sudo privileges and changes the owner to us. Lets break it down.
+
+`sudo` – Runs the command that follows with superuser privileges.
+
+`chown` – Stands for "change owner" and is used here to change the ownership of the file to me.
+
+`$USER:$USER` – This uses a shell variable (`$USER`) to insert the name of the current user. The first `$USER` sets the file’s owner, and the second `$USER` after the colon sets the group owner to the same user.
+
+`newfile1` – This is the name of the target file whose ownership is being changed to us.
+
+---
+
+### Part 4 - Find & Wildcards 🔍🌟
+
