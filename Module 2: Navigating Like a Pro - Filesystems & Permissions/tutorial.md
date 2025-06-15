@@ -43,3 +43,54 @@ Once back in the terminal, enter the `groups` command and you should see your us
 
 ### Part 2 - Installing tree and navigating filesystems 🌲📂🧭
 
+We begin by typing:
+```bash
+sudo apt install tree
+```
+This installs the tree tool so you can view your folders laid out nicely like branches of a tree... Then clear your terminal so we can start fresh.
+
+In the video, we make a new file structure using:
+```bash
+mkdir -p lab/module2/test
+```
+We already know what `mkdir` does from module 1, makes directories, but what does the `-p` do? Essentially the `-p` just means to create the parent directories if they do not already exist. So lets compare.
+
+If you ran:
+```bash
+mkdir lab/module2/test
+```
+The command will seach for a directory called `lab`, then a subdirectory within lab called `module2` and try create the `test` directory in there. This will return an error message since these directories do not exist. However if we instead enter:
+```bash
+mkdir -p lab/module2/test
+```
+Then the command will create the `lab`, and `module2` directories automatically if they didnt already exist. It is pretty handy if you are making a large file structure in one go.
+
+---
+
+Next we use:
+```bash
+cd lab/module2/test
+```
+To directly change into the test directory. We can then use:
+```bash
+cd ..
+```
+To simply go up a level. Using this would then put us in the parent directory, in this case, `lab/module2`.
+
+Next, `cd` back home and use:
+```bash
+cd lab/module2/test/../../module2
+```
+This won't be used realistically but is to demo how `..` can be used in navigation. What the command is doing is going into the `lab` directory, then `module2`, then `test`, then up twice back into `lab`, then back into `module2`.
+
+---
+
+After this, `cd` back home, and use the command:
+```bash
+tree lab
+```
+This shows what the `tree` command does, as per in the video, you will see a clear display of what the `lab` directory looks like. As I said, this is great to vision file structures especially complex ones.
+
+Now change into the root directory using `cd /` where `/` is the root directory and list the contents.
+
+You will notice that there are several new contents here including the `etc` directory which has been touched on in 
