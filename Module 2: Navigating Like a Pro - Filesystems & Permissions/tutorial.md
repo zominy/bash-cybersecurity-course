@@ -93,4 +93,54 @@ This shows what the `tree` command does, as per in the video, you will see a cle
 
 Now change into the root directory using `cd /` where `/` is the root directory and list the contents.
 
-You will notice that there are several new contents here including the `etc` directory which has been touched on in 
+You will notice that there are several new contents here including the `etc` directory which has been touched on in [Module 1](./Module%201:%20Intro%20to%20Bash%20-%20The%20Cybersecurity%20Shell/) where the `etc` directory holds many important files for the operating system.
+
+---
+
+Now enter the command:
+```bash
+tree -L 1
+```
+This will just list the first level of the contents of the root directory. If we used the `tree` command itself then the output would be absolutely gigantic but since we are using `-L` (level) and `1` to clarify we just want to see the first level, then you will see:
+```bash
+.
+├── bin -> usr/bin
+├── boot
+├── dev
+├── etc
+├── home
+├── initrd.img -> boot/initrd.img-6.1.0-35-amd64
+├── initrd.img.old -> boot/initrd.img-6.1.0-34-amd64
+├── lib -> usr/lib
+├── lib64 -> usr/lib64
+├── lost+found
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin -> usr/sbin
+├── srv
+├── sys
+├── tmp
+├── trials
+├── usr
+├── var
+├── vmlinuz -> boot/vmlinuz-6.1.0-35-amd64
+└── vmlinuz.old -> boot/vmlinuz-6.1.0-34-amd64
+
+22 directories, 4 files
+```
+Notice it is only the first level, as we stated. The tree command is not going into any of these directories and listing contents.
+
+---
+
+Now, use `cd /etc` to get into the `etc` directory and enter the command:
+```bash
+ls -lh
+```
+Look at one of the files' file size section, notice it is now in a readable size such as 4.0K for kilobytes instead of 4076. We still get the same output as `ls -l` but the `h` adds the file sizes as it stands for 'human-readable'.
+
+### Part 3 - File permissions & ownership 🔐👤📄
+
