@@ -223,4 +223,38 @@ Using asterisks or question marks to match filenames. For example, `*.txt` grabs
 
 The find command is then used with wildcards like `*` which basically means 'anything' and specific patterns to match file names. For example, `*.txt` grabs everything that ends in .txt, while `file2*` finds anything that starts with file2. The pattern `*1*` matches anything with a 1 anywhere in the name.
 
-This is a fast way to search for groups of files by name, type, or number without needing to look through each one manually.
+This is a fast way to search for groups of files by name, type, or number without needing to look through each one manually. In this case, we are searching through the etc directory for files ending in `.conf`
+
+---
+
+We then run through a few more examples:
+
+```bash
+find /etc -name "*ssh*"
+```
+- Searching for files containing 'ssh'
+```bash
+find /etc -name "*s*"
+```
+- Searching for files that begin with 's'
+```bash
+find /etc -name "*log*conf"
+```
+- Searching for files that contain the word 'log' and ends in 'conf'. Returns permission denied.
+```bash
+sudo find /etc -name "*log*conf"
+```
+- Since the command returned permission denied, we must run it as the sudoer; hence the sudo at the beginning.
+
+---
+
+#### An actual use case of the 'find' command
+
+In the video, we then use the command:
+```bash
+find / -type f -perm -o=w 2>/dev/null
+```
+
+This is an actual use case of the find command. This command searches the whole system (since we put root (`/`)) for files (`-type f`) that anyone can write to (`-perm -o=w`). The `2>/dev/null` bit hides error messages. Good for spotting dodgy file permissions.
+
+#### Note: This command is used in module 3 again.
