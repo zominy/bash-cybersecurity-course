@@ -211,3 +211,16 @@ This command required sudo privileges and changes the owner to us. Lets break it
 
 ### Part 4 - Find & Wildcards 🔍🌟
 
+Next, we then use the command:
+```bash
+find /etc -name "*.conf"
+```
+The `find` command searches for files and folders based on different criteria, in this case it is for all files that end in `.conf`.
+
+The asterisk/star is a 'wildcard' and works as so:
+
+Using asterisks or question marks to match filenames. For example, `*.txt` grabs all text files. Super useful for bulk stuff such as the /etc directory.
+
+The find command is then used with wildcards like `*` which basically means 'anything' and specific patterns to match file names. For example, `*.txt` grabs everything that ends in .txt, while `file2*` finds anything that starts with file2. The pattern `*1*` matches anything with a 1 anywhere in the name.
+
+This is a fast way to search for groups of files by name, type, or number without needing to look through each one manually.
