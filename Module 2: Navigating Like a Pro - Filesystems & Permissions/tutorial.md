@@ -33,7 +33,7 @@ max ALL=(ALL:ALL) ALL
 ```
 Where this command adds the user `max` or your username to the sudoers file and gives them all privileges.
 
-After this use the keybind `Crtl + O` then enter to save your changes and then `Crtl + X` to exit the sudoers file. Rest assured your changes are saved.
+After this use the keybind `Ctrl + O` then enter to save your changes and then `Ctrl + X` to exit the sudoers file. Rest assured your changes are saved.
 
 Then type `exit` to log out from root and then `exit` again to close the terminal and restart the virtual machine. For me, this has always been necessary for this change to take place so hence why I am doing it this way but you are better off just restarting anyways.
 
@@ -59,7 +59,7 @@ If you ran:
 ```bash
 mkdir lab/module2/test
 ```
-The command will seach for a directory called `lab`, then a subdirectory within lab called `module2` and try create the `test` directory in there. This will return an error message since these directories do not exist. However if we instead enter:
+The command will search for a directory called `lab`, then a subdirectory within lab called `module2` and try create the `test` directory in there. This will return an error message since these directories do not exist. However if we instead enter:
 ```bash
 mkdir -p lab/module2/test
 ```
@@ -146,7 +146,7 @@ Look at one of the files' file size section, notice it is now in a readable size
 
 Begin with `cd` to go back home and clear the terminal.
 
-We will be using a new command to create an emtpy file like so:
+We will be using a new command to create an empty file like so:
 ```bash
 touch newfile.txt
 ```
@@ -162,7 +162,7 @@ Next, enter:
 ```bash
 chmod 700 newfile.txt
 ```
-Get a long listing of this file too to see the permissions. Please split the 700 into three seperate digits where the first digit applies to the owner, the second digit to the group, and the third digit others (anyone else).
+Get a long listing of this file too to see the permissions. Please split the 700 into three separate digits where the first digit applies to the owner, the second digit to the group, and the third digit others (anyone else).
 
 Each permission type corresponds to a number:
 
