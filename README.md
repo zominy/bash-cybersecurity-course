@@ -16,6 +16,7 @@ Each module has:
 ### Modules:
 - [Module 1: Intro to Bash - The Cybersecurity Shell](./Module%201:%20Intro%20to%20Bash%20-%20The%20Cybersecurity%20Shell/)
 - [Module 2: Navigating Like a Pro - Filesystems & Permissions](./Module%202%3A%20Navigating%20Like%20a%20Pro%20-%20Filesystems%20%26%20Permissions)
+- [Module 3: Variables, Loops, and Conditionals](./Module%203:%20Variables,%20Loops,%20and%20Conditionals:%20Building%20Logic%20for%20Defense/)
 - ... (coming soon...)
 
 ## 📬 Contact
