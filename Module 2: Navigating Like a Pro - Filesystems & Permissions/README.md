@@ -32,4 +32,4 @@ By the end of this module, you should be able to:
 
 ## 🚀 Next Up
 
-Head to [Module 3](./Module%203%3A%20%22Variables%2C%20Loops%2C%20and%20Conditionals%3A%20Building%20Logic%20for%20Defense%22) to learn about scripting fundamentals and how to build and automated file scanner!
+Head to [🔁💡🛡️ Module 3: Variables, Loops, and Conditionals: Building Logic for Defense](./Module%203%3A%20Variables%2C%20Loops%2C%20and%20Conditionals%3A%20Building%20Logic%20for%20Defense) to learn about scripting fundamentals and how to build and automated file scanner!
