@@ -237,7 +237,7 @@ This command required sudo privileges and changes the owner to us. Lets break it
 
 ## Wildcards 🌟🃏
 
-Explanation: Using asterisks or question marks to match filenames. For example, *.txt grabs all text files. Super useful for bulk stuff such as the /etc directory.
+Explanation: Using asterisks or question marks to match filenames. For example, `*.txt` grabs all text files. Super useful for bulk stuff such as the /etc directory.
 
 Example:
 ```bash
