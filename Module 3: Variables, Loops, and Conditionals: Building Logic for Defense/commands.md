@@ -179,6 +179,7 @@ fi
 
 echo "Done"
 ```
+Here is a line-by-line breakdown of what is happening:
 ```bash
 1. #!/bin/bash
 ```
