@@ -407,9 +407,42 @@ done
 ```
 | Code                                  | What It's Doing                                                             |
 |---------------------------------------|------------------------------------------------------------------------------|
-| `for logfile in /var/log/*.log; do`   | Loop through every `.log` file in `/var/log`                                |
-| `echo "Checking $logfile..."`         | Print the name of the file being searched                                   |
+| `for logfile in /var/log/*.log; do`   | Loop through every `.log` file in `/var/log` using wildcards                                |
+| `echo "Checking $logfile..."`         | Print the name of the file being searched using substitution                                   |
 | `grep "error" "$logfile"`             | Search the file for the word "error" and print any matching lines           |
 | `done`                                | Ends the loop                                                               |
+
+#### Step 9
+
+Print message to signal completion:
+```bash
+echo "Scan Complete!"
+```
+- Only shows if root because it is within the if statement.
+
+#### Step 10
+
+In case of not root, show warning:
+```bash
+else
+    echo ""
+    echo "You are not the root user, so you cannot use this script"
+fi
+```
+- If the user is not root, we tell them they dont have permission to run the scan.
+
+#### Step 11
+
+Signal Completion:
+```bash
+echo "Done"
+```
+No matter who runs this they will be notified that the script is done.
+
+---
+
+Feel free to save it and run it. Admire your hard work. Expect errors, for troubleshooting, check out the [errors](errors.md) file.
+
+All the best.
 
 
