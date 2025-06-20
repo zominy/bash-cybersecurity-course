@@ -20,11 +20,12 @@ A syntax is the rules about how you have to write things in a programming or scr
 
 ## Module 3 Lab 🛡️💻
 
+### Important | When saving scripts always use Ctrl + O, Enter, then Ctrl X. Not saving will result in lost progress.
 ---
 
 ### Part 1 - Creating a script file 📄⚙️
 
-In the beginning of the lab we use the commmand:
+In the beginning of the lab we use the command:
 ```bash
 touch s1.sh; chmod 700 s1.sh; nano s1.sh
 ```
@@ -69,7 +70,7 @@ DATE=$(date +%F)
 ```
 These are variables, they store information under a name and can be reused throughout a program.
 
-Lets talk about `USERNAME=$(whoami)`. This example stores the text output of the whoami command under the variable 'USERNAME'. The command must be encapsulated like so: $('command'). So it will run the whoami command in the terminal and just hold the result. If your username is 'david' then it will store the name 'david'.
+Lets talk about `USERNAME=$(whoami)`. This example stores the text output of the whoami command under the variable 'USERNAME'. The command must be encapsulated like so: $(command). So it will run the whoami command in the terminal and just hold the result. If your username is 'david' then it will store the name 'david'.
 
 It is the same for the date. It stores the date in YYYY-MM-DD format. Lets actually do something with these new variables. Write:
 
@@ -129,7 +130,7 @@ Loops are written in a certain way, examine the diagram to learn how:
 | ... (commands)     | Commands for the "false" case if the condition isnt met.         |
 | fi                 | Ends the if-statement block. (Mandatory to tell the system it is done)           |
 
-You're script should now look like this:
+Your script should now look like this:
 ```bash
 #!/bin/bash
 USERNAME=$(whoami)
@@ -212,7 +213,7 @@ It works like so:
 `for int in 1 2 3 4 5; do`
 - Start a loop where the variable `int` takes each value in the list `1 2 3 4 5` one by one. The `do` means to start running the commands below for each value.
 
-`  echo "Number: $x"`
+`  echo "Number: $int"`
 - Print the current value of `int` with the text "Number:". The `$int` inserts the value of the variable `int`.
 
 `done`
@@ -277,7 +278,7 @@ grep "error" "$file"
 
 Create a new file called `simple_scanner.sh` as it is in the video. Apply appropriate privileges and open the editor.
 
-This may feel like a little shove in the water but trust me here, it is nothing we have not covered. Here is what we will write but please don't copy just take your time. For now have a peek:
+This may feel like a little shove in the water but trust me here, it is nothing we have not covered. Here is what we will write but try typing it out yourself following the steps, and feel free to reference the code if needed. For now have a peek:
 ```bash
 #!/bin/bash
 USERNAME=$(whoami)
