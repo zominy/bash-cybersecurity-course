@@ -33,5 +33,5 @@ By the end of this module, you should be able to:
 
 ## 🚀 Next Up
 
-Head to MODULE 4 to learn about COMING!
+Head to [Module 4](Module%204:%20Tooling%20Up:%20Bash%20With%20Security%20Tools) to learn about security tools!
 
