@@ -33,5 +33,5 @@ By the end of this module, you should be able to:
 
 ## 🚀 Next Up
 
-Head to [Module 4](../Module%204:%20Tooling%20Up:%20Bash%20With%20Security%20Tools) to learn about security tools!
+Head to [Module 4](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%204%3A%20%20Tooling%20Up%3A%20Bash%20with%20Security%20Tools) to learn about security tools!
 
