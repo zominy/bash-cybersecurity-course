@@ -142,3 +142,43 @@ PORT    SERVICE
 80/tcp  http
 443/tcp https
 ```
+
+---
+
+## whois 🔍
+
+Explanation: `whois` looks up registration details about a domain name or IP address.
+
+Example:
+```bash
+whois google.com
+```
+You will see something like:
+```
+Domain Name: GOOGLE.COM
+Registrar: MarkMonitor Inc.
+Creation Date: 1997-09-15
+Registry Expiry Date: 2028-09-14
+Name Server: NS1.GOOGLE.CO
+```
+This is useful for:
+
+- Checking domain ownership
+
+- Seeing when a domain expires
+
+- Investigating suspicious domains
+
+---
+
+## netstat -tuln 🌐📊
+
+Explanation: `netstat` - Shows network connections, routing tables, interface stats, etc.
+
+`-t` - Show TCP connections.
+
+`-u` - Show UDP connections
+
+`-l` - Show only listening ports.
+
+`-n` - Show numeric addresses and ports. Basically, show 80 instead of HTTP.
