@@ -28,13 +28,22 @@ Example 2:
 ```bash
 RESULT=$(nmap -p 22,80,443 localhost)
 ```
+The output of `nmap -p 22,80,443 localhost` is:
+```
+PORT    STATE  SERVICE
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+```
+This is stored in RESULT.
+
 `RESULT=`: This assigns the output of the command on the right to the variable named RESULT. This is a shell variable. Once the terminal is closed it is erased.
 
-`$( ... )`: Command substitution — runs the command inside and captures its output as a string.
+`$( ... )`: Command substitution - runs the command inside and captures its output as a string.
 
 `nmap`: The network scanning tool.
 
-`-p 22,80,443`: Scan only specific ports — 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+`-p 22,80,443`: Scan only specific ports - 22 (SSH), 80 (HTTP), and 443 (HTTPS).
 
 `localhost`: Scan your local machine (IP 127.0.0.1). I am only scanning myself as I am allowed. Scanning other devices I have no permission to scan is illegal and unethical.
 
@@ -46,6 +55,90 @@ echo "$RESULT" | grep "open"
 ```
 `echo "$RESULT"`: Prints the content of the variable RESULT. The quotes preserve line breaks and spacing.
 
-`|`: Pipe — sends the output of the command on the left as input to the command on the right.
+`|`: Pipe - sends the output of the command on the left as input to the command on the right.
 
 `grep "open"`: Searches the input for lines containing the word "open" and prints those lines. This is parsing, parsing means extracting or processing specific pieces of information from raw data or text. In this case we are extracting open ports from an nmap scan.
+
+---
+
+## The Scanner Wrapper 📦🔍
+
+In the video, the scanner looks like this:
+```bash
+#!/bin/bash
+
+HOST=$1
+
+if [ -z "$HOST" ]; then
+	echo "Host Not Found"
+	exit 1
+fi
+
+nmap -p 22,80,443 $HOST | grep "closed"
+```
+`#!/bin/bash` - Shebang. Tells the system to run the script using the Bash shell.
+
+`HOST=$1` - Basically, you write `./scanner.sh <target>`. In our case it is `./scanner.sh localhost`, the 'localhost' is the first command-line argument. The `$1` means to assign the first command-line argument to HOST.
+
+`if [ -z "$HOST" ]; then` - Checks if HOST is empty (no argument was passed), `-z` means 'zero length'.
+
+```
+echo "Host Not Found"
+exit 1
+```
+If no host was provided, it prints an error message and exit with code 1 (this is to indicate failure).
+
+`nmap -p 22,80,443 $HOST | grep "closed"` - Scans the specified host ($HOST) for ports 22(SSH), 80(HTTP), and 443(HTTPS). Pipes the output to grep "closed" to show only ports that are closed.
+
+---
+
+## cut ✂️
+
+Explanation: A tool used to extract specific columns or fields from text inputs.
+
+Example:
+```bash
+echo "$RESULT" | cut -d "/" -f 1
+```
+`echo "$RESULT"`: Prints the contents of the RESULT variable (the nmap output from earlier).
+
+`|`: Sends that output to the next command (cut).
+
+`cut -d "/" -f 1`:
+
+`-d "/"`: Use the slash / as the delimiter (what to split on).
+
+`-f 1`: Extract the first field (everything before the first / on each line as specified).
+
+So if you had an output from `nmap -p 80 localhost` that looked like this `80/tcp  closed  http`. You could then run:
+
+`nmap -p 80 localhost | cut -d "/" -f 1` to get just `80`.
+
+---
+
+## awk 🧮🔤
+
+Explanation: `awk` is a powerful text processing tools. It can be used to print specific feilds of an output.
+
+Example:
+```bash
+echo "$RESULT" | awk '{print $1}'
+```
+This means to print the first feild and would print:
+```
+PORT
+22/tcp
+80/tcp
+443/tcp
+```
+If we want to more than one field we can run:
+```bash
+echo "$RESULT" | awk '{print $1, $3}'
+```
+This will print feilds 1 and 3:
+```
+PORT    SERVICE
+22/tcp  ssh
+80/tcp  http
+443/tcp https
+```
