@@ -51,13 +51,13 @@ This is stored in RESULT.
 
 Example 3 (Parsing):
 ```bash
-echo "$RESULT" | grep "open"
+echo "$RESULT" | grep "closed"
 ```
 `echo "$RESULT"`: Prints the content of the variable RESULT. The quotes preserve line breaks and spacing.
 
 `|`: Pipe - sends the output of the command on the left as input to the command on the right.
 
-`grep "open"`: Searches the input for lines containing the word "open" and prints those lines. This is parsing, parsing means extracting or processing specific pieces of information from raw data or text. In this case we are extracting open ports from an nmap scan.
+`grep "closed"`: Searches the input for lines containing the word "closed" and prints those lines. This is parsing, parsing means extracting or processing specific pieces of information from raw data or text. In this case we are extracting open ports from an nmap scan.
 
 ---
 
