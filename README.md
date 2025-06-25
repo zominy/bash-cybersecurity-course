@@ -18,6 +18,7 @@ Each module has:
 - [Module 2: Navigating Like a Pro - Filesystems & Permissions](./Module%202%3A%20Navigating%20Like%20a%20Pro%20-%20Filesystems%20%26%20Permissions)
 - [Module 3: Variables, Loops, and Conditionals](./Module%203:%20Variables,%20Loops,%20and%20Conditionals:%20Building%20Logic%20for%20Defense/)
 - [Module 4: Tooling Up: Bash With Security Tools](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%204%3A%20%20Tooling%20Up%3A%20Bash%20with%20Security%20Tools)
+- [Module 5: Logs and Logs: Automating Log Monitoring](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%205%3A%20Logs%20and%20Logs%3A%20Automating%20Log%20Monitoring)
 - ... (coming soon...)
 
 ## 📬 Contact
