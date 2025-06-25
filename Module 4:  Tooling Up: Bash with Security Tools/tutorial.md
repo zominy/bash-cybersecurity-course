@@ -1,4 +1,4 @@
-# Module 4: Tooling Up: Bash with Security Tools
+# Module 4: Tooling Up: Bash with Security Tools 🛠️🐚
 
 ## Introduction
 
@@ -115,20 +115,61 @@ echo "$RESULT" | grep "closed"
 
 When this is ran, you will see an output that looks like this:
 ```
-
-
----
-
-
-
----
-
-
-
-
+max@debian:~$ echo "$RESULT" | grep "closed"
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+```
+As can be seen, we are parsing the output of RESULT for only lines containing 'closed'. You would use this in cases where you are scanning multiple ports and want to only see certain ports. e.g. open ports only to see which you could exploit, closed ports only, certain protocols, port numbers, etc.
 
 ---
 
+## Part 3 - The Scanner Wrapper 🌀🔄
+
+In the video, we next create a new empty file, make it executable and open the text editor by using the command:
+```bash
+max@debian:~$ touch scanner.sh; chmod +x scanner.sh; nano scanner.sh
+```
+Then write this script:
+```bash
+#!/bin/bash
+
+HOST=$1
+
+if [ -z "$HOST" ]; then
+	echo "Host Not Found"
+	exit 1
+fi
+
+nmap -p 22,80,443 $HOST | grep "closed"
+```
+`#!/bin/bash` - Shebang. Tells the system to run the script using the Bash shell.
+
+`HOST=$1` - Basically, you write `./scanner.sh <target>`. In our case it is `./scanner.sh localhost`, the 'localhost' is the first command-line argument. The `$1` means to assign the first command-line argument to HOST.
+
+`if [ -z "$HOST" ]; then` - Checks if HOST is empty (no argument was passed), `-z` means 'zero length'.
+
+```
+echo "Host Not Found"
+exit 1
+```
+If no host was provided, it prints an error message and exit with code 1 (this is to indicate failure).
+
+`nmap -p 22,80,443 $HOST | grep "closed"` - Scans the specified host ($HOST) for ports 22(SSH), 80(HTTP), and 443(HTTPS). Pipes the output to grep "closed" to show only ports that are closed.
+
+When you run it normally like this: `./scanner.sh` you will see `Host Not Found` due to there being no argument following the executions.
+
+When you run it with a target like this: `./scanner.sh localhost` then you will get an output like this:
+```
+max@debian:~$ ./scanner.sh localhost
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+```
+
+---
+
+## Part 4 - Cut, Awk, Whois, and Netstat 🌐📊
 
 
 
