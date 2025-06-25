@@ -1,7 +1,5 @@
 ## 💥 Error Table for Module 3
 
-I think this format is better from now on.
-
 | 🧩 Area                    | ⚠️ Error Message / Behavior                              | ❓ Cause                                                                 | ✅ Fix                                                                                   |
 |---------------------------|-----------------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | Script doesn’t run        | `Permission denied`                                       | File is not executable                                                 | Run `chmod +x script.sh` or `chmod 700 script.sh` to give execute permission                                      |
