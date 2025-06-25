@@ -171,5 +171,151 @@ max@debian:~$ ./scanner.sh localhost
 
 ## Part 4 - Cut, Awk, Whois, and Netstat 🌐📊
 
+As we know, the output of `echo "$RESULT"` displays the output of `nmap -p 22,80,443 <target>`. We can use the cut command to extract specific columns or feilds like so:
+```bash
+echo "$RESULT" | cut -d "/" -f 1
+```
+`echo "$RESULT"`: Prints the contents of the RESULT variable (the nmap output from earlier).
 
+`|`: Sends that output to the next command (cut).
 
+`cut -d "/" -f 1`:
+
+`-d "/"`: Use the slash / as the delimiter (what to split on).
+
+`-f 1`: Extract the first field (everything before the first / on each line as specified).
+
+So if you had an output from `nmap -p 80 localhost` where the output looked like this `80/tcp  closed  http`. You could then run:
+
+`nmap -p 80 localhost | cut -d "/" -f 1` to get just `80`.
+
+Let's try:
+```bash
+max@debian:~$ echo "$RESULT" | cut -d "/" -f 1
+```
+And you will see an output looking like this:
+```
+Starting Nmap 7.93 ( https:
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00022s latency).
+Other addresses for localhost (not scanned): ::1
+
+PORT    STATE  SERVICE
+22
+80
+443
+
+Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
+```
+You can see we have extracted only the port numbers.
+
+---
+
+We can also use `awk` to print specific feilds of an output.
+
+Example from video:
+```bash
+echo "$RESULT" | awk '{print $1}'
+```
+This means to print the first feild and would print:
+```
+Starting
+Nmap
+Host
+Other
+
+PORT
+22/tcp
+80/tcp
+443/tcp
+
+Nmap
+```
+If we want to more than one field we can run (from video):
+```bash
+echo "$RESULT" | awk '{print $1, $2}'
+```
+This will print feilds 1 and 2:
+```
+Starting Nmap
+Nmap scan
+Host is
+Other addresses
+ 
+PORT STATE
+22/tcp closed
+80/tcp closed
+443/tcp closed
+ 
+Nmap done:
+```
+
+---
+
+We then use `whois` as it looks up registration details about a domain name or IP address.
+
+Example (from video):
+```bash
+whois example.com
+```
+You will see something like:
+```
+Domain Name: EXAMPLE.COM
+   Registry Domain ID: 2336799_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.iana.org
+   Registrar URL: http://res-dom.iana.org
+   Updated Date: 2024-08-14T07:01:34Z
+   Creation Date: 1995-08-14T04:00:00Z
+   Registry Expiry Date: 2025-08-13T04:00:00Z
+   Registrar: RESERVED-Internet Assigned Numbers Authority
+   Registrar IANA ID: 376
+   Registrar Abuse Contact Email:
+   Registrar Abuse Contact Phone:
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+   Name Server: A.IANA-SERVERS.NET
+   Name Server: B.IANA-SERVERS.NET
+   DNSSEC: signedDelegation
+   DNSSEC DS Data: 370 13 2 BE74359954660069D5C63D200C39F5603827D7DD02B56F120EE9F3A86764247C
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2025-06-25T15:42:27Z <<<
+```
+This is useful for:
+
+- Checking domain ownership
+
+- Seeing when a domain expires
+
+- Investigating suspicious domains
+
+---
+
+The final topic covered is a command called `netstat`. In the video we run the command:
+```bash
+netstat -tuln
+```
+`netstat` - Shows network connections, routing tables, interface stats, etc.
+
+`-t` - Show TCP connections.
+
+`-u` - Show UDP connections
+
+`-l` - Show only listening ports.
+
+`-n` - Show numeric addresses and ports. Basically, show 80 instead of HTTP.
+
+The output will look like this:
+```
+max@debian:~$ netstat -tuln
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
+udp        0      0 0.0.0.0:44544           0.0.0.0:*                          
+udp6       0      0 :::5353                 :::*                               
+udp6       0      0 :::55635                :::*                               
+max@debian:~$ 
+```
+The `netstat -tuln` command displays all listening TCP and UDP ports on the system, showing which services are waiting for network connections. In this output as shown above, the system is running a local printing service on port 631 for both IPv4 (127.0.0.1) and IPv6 (::1), meaning its only accessible from the local machine. Look at the first line, that looks like this: `tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN   ` the numbers `127.0.0.1:631` means `IP 127.0.0.1` and the number after the colon is the port, in this case `631` (the local printing service). It’s also listening on UDP ports 5353, 44544, and 55635 with 5353 commonly used for multicast DNS (device discovery). These UDP ports are open on all interfaces (0.0.0.0 and :::), but since they use UDP (a connectionless protocol), they dontt show a state like TCP does.
