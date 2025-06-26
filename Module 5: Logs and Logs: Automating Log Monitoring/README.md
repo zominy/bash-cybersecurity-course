@@ -1,14 +1,14 @@
-# 🧰🛡️ Module 4: Tooling Up: Bash with Security Tools 🟩
+# 📜🤖 Module 5: Logs and Logs: Automating Log Monitoring 🟧
 
-The documents in this folder are here to accompany the module 4 content.
+The documents in this folder are here to accompany the Module 5 content.
 
-This module introduces new tools and commands used in the cybersecurity space. Tools such as nmap, whois, and netstat are demonstrated in this module and scripting is touched on again.
+This module introduces basic log monitoring and automation. You'll learn to read logs using tools like `cat`, `less`, `tail`, `grep`, and `journalctl`, and write simple bash scripts to scan for failed login attempts.
 
-🎥 Watch Module 4 Here: [Watch Video](https://www.youtube.com/watch?v=zwgsWhYL0Sc&list=PLGPhFvIx6g8hdTP3fj2GV7qeISOUjYknL&index=1)
+🎥 Watch Module 5 Here: COMING
 
 ---
 
-## 📚 Material for Module 4
+## 📚 Material for Module 5
 
 1. [📖 Commands](./commands.md)  
    View all commands used in this lab with explanations of what they do.
@@ -25,14 +25,13 @@ This module introduces new tools and commands used in the cybersecurity space. T
 ## 🎯 Aims
 
 By the end of this module, you should be able to:
-- Understand how to use nmap, netstat, and whois for network scanning and information gathering.
-- Automate common tasks by integrating these tools into scripts.
-- Store the results of commands for later analysis or processing.
-- Parse and extract relevant data from command output
-- Develop a wrapper script
+- Understand where and how system logs are stored.
+- Use tools like `grep`, `tail`, and `journalctl` to read logs.
+- Identify failed login attempts in logs.
+- Write a basic bash script to automate log scanning.
 
 ---
 
 ## 🚀 Next Up
 
-Head to MODULE 5 to learn about COMING!
+Head to MODULE 6 to learn about COMING!
