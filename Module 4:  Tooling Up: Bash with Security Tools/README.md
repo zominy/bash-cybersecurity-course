@@ -36,5 +36,5 @@ By the end of this module, you should be able to:
 
 ## 🚀 Next Up
 
-Head to MODULE 5 to learn about COMING!
+Head to [Module 5](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%205%3A%20Logs%20and%20Logs%3A%20Automating%20Log%20Monitoring) to learn about log monitoring!
 
