@@ -62,3 +62,16 @@ Logs like this confirm privilege escalation was granted and when it happened. It
 Explanation: This shows the system logs as they are with real-time updates. So when things are happening they are immediately logged and displayed infront of you.
 
 The `-f` flag stands for follow. It works just like `tail -f` as it continuously prints new log entries as they are written in the journal.
+
+If you were to run this and start clicking around, you will see new entries appear.
+
+---
+
+## sudo journalctl | grep "Failed password" 📘❌🔑
+
+Explanation: Filters journal entries to show only lines containing “Failed password,” indicating failed SSH login attempts. Essentially scans the entire log and returns lines containing "Failed Password".
+
+#### Note: We are already familiar with this concept as covered in [Module 3](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%203%3A%20Variables%2C%20Loops%2C%20and%20Conditionals%3A%20Building%20Logic%20for%20Defense) and [Module 4](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%204%3A%20%20Tooling%20Up%3A%20Bash%20with%20Security%20Tools)
+
+
+
