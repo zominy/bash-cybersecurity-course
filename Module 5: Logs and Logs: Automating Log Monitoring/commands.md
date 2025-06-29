@@ -73,5 +73,126 @@ Explanation: Filters journal entries to show only lines containing “Failed pas
 
 #### Note: We are already familiar with this concept as covered in [Module 3](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%203%3A%20Variables%2C%20Loops%2C%20and%20Conditionals%3A%20Building%20Logic%20for%20Defense) and [Module 4](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%204%3A%20%20Tooling%20Up%3A%20Bash%20with%20Security%20Tools)
 
+---
+
+## sudo journalctl -n 50 > journal.txt 📘📄➡️📝
+
+Explanation: Takes the last 50 lines of the logs and puts it into a new file called `journal.txt`. This has been covered in [Module 1](https://github.com/zominy/bash-cybersecurity-course/blob/main/Module%201%3A%20Intro%20to%20Bash%20-%20The%20Cybersecurity%20Shell/commands.md).
+
+---
+
+## cat 🐱📄
+
+Explanation: `cat` prints the full contents of a file.
+
+Example:
+```bash
+maxz@zom:~$ sudo journalctl -n 3 > newjournal.txt; cat newjournal.txt
+Jun 29 01:30:05 zom systemd[1]: packagekit.service: Consumed 16.867s CPU time.
+Jun 29 01:31:30 zom sudo[2838]:     maxz : TTY=pts/0 ; PWD=/home/maxz ; USER=root ; COMMAND=/usr/bin/journalctl -n 3
+Jun 29 01:31:30 zom sudo[2838]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+maxz@zom:~$ 
+```
+So what this means is, to first take the last 3 lines of the logs and put them in a new file called `newjournal.txt` then `cat newjournal.txt` lists all the contents of this file.
+
+---
+
+## less 🔍📄
+
+Explanation: Allows you to scroll up and down through large text files one screen at a time.
+
+Example:
+```bash
+less newjournal.txt
+```
+Press Ctrl + C to exit.
+
+---
+
+## vi 📝⌨️
+
+Explanation: It is a lightweight yet powerful text editor that runs in the terminal. So far we have used `nano` due to it being much more user friendly but `vi` is also an option.
+
+Basically, just write `vi <target file>` to open the editor for that file.
+
+Here’s a quick cheat sheet:
+
+- Use arrow keys for navigation
+- Press i to start editing (insert mode).
+- Press Esc to leave insert mode.
+- Type :w to save.
+- Type :q to quit.
+- Type :wq to save and quit.
+- Type :q! to quit without saving.
+
+---
+
+## The Log Scanner 🔍📜🗂️
+
+Below is the scanner:
+```bash
+#!/bin/bash
+
+OUTPUT_DIR="$HOME/log_scans"
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+OUTPUT_FILE="$OUTPUT_DIR/failed_logins_$TIMESTAMP.txt"
+
+mkdir -p "$OUTPUT_DIR"
+
+echo "Scanning journal logs for failed login attempts..."
+
+sudo journalctl | grep "Failed password" > "$OUTPUT_FILE"
+
+ATTEMPT_COUNT=$(wc -l < "$OUTPUT_FILE")
+
+echo "Scan complete."
+echo "Found $ATTEMPT_COUNT failed login attempts."
+echo "Results saved to $OUTPUT_FILE"
+```
+Explanation part-by-part:
+
+- `#!/bin/bash` - We all know this is the shebang. Tells the system to use `/bin/bash` to run the script.
+
+- `OUTPUT_DIR="$HOME/log_scans"` - Defines the variable `OUTPUT_DIR`. $HOME is an environment variable that expands to the current user home directory. We set the folder where our results will be stored (bare in mind it is not actually made yet). Using a dedicated directory helps keep output organised and separate from other files plus the home directory is getting kinda crowded now.
+
+- `TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")` Defines `TIMESTAMP`. The + format specifies how the date/time will appear, where in this case it will look like `2025-06-26_15-20-44`.
+  - `%Y` - Year
+  - `%m` - Month (lower case m)
+  - `%d` - Day
+  - `%H` - Hour
+  - `%M` - Minute (upper M)
+  - `%S` - Second
+  - `-` & `_` - Seperators so it is not just a bunch of numbers
+  
+This allows unique, timestamped filenames to avoid overwriting (using the same file name and messing stuff up).
+
+- `OUTPUT_FILE="$OUTPUT_DIR/failed_logins_$TIMESTAMP.txt"` - Constructs the full path to the output file using the directory and timestamp. Example: `/home/maxz/log_scans/failed_logins_2025-06-26_15-20-44.txt`.
+
+- `mkdir -p "$OUTPUT_DIR"` - As I stated earlier, now the `mkdir -p` creates the directory that contains the scans as needed. If it already exists, it is not overwritten. This was covered in [Module 2](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%202%3A%20Navigating%20Like%20a%20Pro%20-%20Filesystems%20%26%20Permissions)
+
+- `echo "Scanning journal logs for failed login attempts..."` - Prints a message to let the user know it has started.
+
+- `sudo journalctl | grep "Failed password" > "$OUTPUT_FILE"`:
+  
+  - Runs `journalctl` to dump all logs
+
+  - Pipes `|` the output to grep which filters only lines containing "Failed password"
+
+  - The `>` redirects the output of grep into the specified output file
+ 
+- `ATTEMPT_COUNT=$(wc -l < "$OUTPUT_FILE")`:
+  - Runs `wc -l` on the output file to count the number of lines (here each line corresponds to a failed login attempt)
+
+  - The `<` syntax redirects the file content as input to `wc -l` (so basically taking OUT of the output file in a way)
+
+  - The count is assigned to the variable `ATTEMPT_COUNT`
+ 
+```bash
+echo "Scan complete."
+echo "Found $ATTEMPT_COUNT failed login attempts."
+echo "Results saved to $OUTPUT_FILE"
+```
+- Prints a small summary of the scan.
 
 
+This lab was good fun, but tricky too.
