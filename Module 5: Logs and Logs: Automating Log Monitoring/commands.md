@@ -187,7 +187,7 @@ This allows unique, timestamped filenames to avoid overwriting (using the same f
 
   - The count is assigned to the variable `ATTEMPT_COUNT`
  
--
+---
  
 ```bash
 echo "Scan complete."
