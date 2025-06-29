@@ -187,6 +187,8 @@ This allows unique, timestamped filenames to avoid overwriting (using the same f
 
   - The count is assigned to the variable `ATTEMPT_COUNT`
  
+-
+ 
 ```bash
 echo "Scan complete."
 echo "Found $ATTEMPT_COUNT failed login attempts."
@@ -194,5 +196,6 @@ echo "Results saved to $OUTPUT_FILE"
 ```
 - Prints a small summary of the scan.
 
+---
 
 This lab was good fun, but tricky too.
