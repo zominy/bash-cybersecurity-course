@@ -4,7 +4,7 @@ The documents in this folder are here to accompany the Module 5 content.
 
 This module introduces basic log monitoring and automation. You'll learn to read logs using tools like `cat`, `less`, `tail`, `grep`, and `journalctl`, and write simple bash scripts to scan for failed login attempts.
 
-🎥 Watch Module 5 Here: COMING
+🎥 Watch Module 5 Here: [Watch](https://www.youtube.com/watch?v=RYclAh6ZAX4&list=PLGPhFvIx6g8hdTP3fj2GV7qeISOUjYknL)
 
 ---
 
