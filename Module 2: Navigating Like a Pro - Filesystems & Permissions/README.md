@@ -4,7 +4,8 @@ The documents in this folder are here to accompany the module 2 content.
 
 This module teaches how to to confidently navigate the Linux filesystem, manage file permissions and ownership, and locate important files using powerful command-line tools.
 
-🎥 Watch Module 2 Here: (link coming soon.)
+🎥 Watch Module 2 Here: [Watch](https://www.youtube.com/watch?v=F1AS8GF410M&t=1s)
+
 ---
 
 ## 📚 Material for Module 2
