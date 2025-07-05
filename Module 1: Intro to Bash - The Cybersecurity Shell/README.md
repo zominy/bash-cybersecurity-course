@@ -5,6 +5,7 @@ The documents in this folder are here to accompany the module 1 intro to bash.
 This module teaches basic commands as it aims just to try and get you comfortable with writing commands and the terminal.
 
 🎥 Watch Module 1 Here: [Watch](https://www.youtube.com/watch?v=6QyjFj5dRVE&t=196s)
+
 ---
 
 ## 📚 Material for Module 1
