@@ -10,8 +10,8 @@ Welcome! This is the official GitHub repo for my YouTube course on Bash scriptin
 
 Each module has:
 - `commands.md` – all commands used, with explanations as to what they do.
-- `tutorials.md` – documentation of each of the videos, that essentailly walk you through the material.
 - `errors.md` – common mistakes or errors to watch out for!
+- *(Legacy)* `tutorial.md` – Present in early modules only; deprecated in favor of expanded command explanations.
 
 ### Modules:
 - [Module 1: Intro to Bash - The Cybersecurity Shell](./Module%201:%20Intro%20to%20Bash%20-%20The%20Cybersecurity%20Shell/)
