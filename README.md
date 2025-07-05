@@ -28,3 +28,5 @@ This project is free and open to all learners!
 
 ---
 📄 This course is licensed under the [Creative Commons BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+#### 🚧 This course is a work-in-progress — new modules are added weekly throughout Summer 2025.
