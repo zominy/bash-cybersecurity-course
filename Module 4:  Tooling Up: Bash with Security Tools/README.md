@@ -1,4 +1,3 @@
-
 # 🧰🛡️ Module 4: Tooling Up: Bash with Security Tools 🟩
 
 The documents in this folder are here to accompany the module 4 content.
@@ -15,10 +14,11 @@ This module introduces new tools and commands used in the cybersecurity space. T
    View all commands used in this lab with explanations of what they do.
    This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
 
-3. [🎓Tutorial](./tutorial.md)  
-   Documentation-style write up of the lab and how to do it if you'd like to do it in your own time or go over the material.
+2. [📝 Notes](./notes.md) *(Legacy)*  
+   Supplementary notes providing additional context and explanation for the module.  
+   *Note: From Module 5 onward, notes have been deprecated in favor of detailed commands files.*
 
-5. [⚠Possible errors and how to fix them](./errors.md)  
+3. [⚠Possible errors and how to fix them](./errors.md)  
    A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
 ---
