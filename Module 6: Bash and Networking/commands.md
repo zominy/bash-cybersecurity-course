@@ -80,3 +80,117 @@ So using `curl -I`, we can check if a web server is up, what HTTP version it use
 ---
 
 ## nc -zv localhost 22 80 443 🧪🔌📡
+
+- `nc`: Shorthand for 'netcat'.
+- `-z`: Stands for "Zero I/O mode"; just check if port is open, no data sent.
+- `-v`: Verbose; show output details.
+- `localhost`: Test your own machine (127.0.0.1) - loopback IP.
+`22 80 443`: Scan these specific ports (written the same as the `nmap` command from [Module 4](https://github.com/zominy/bash-cybersecurity-course/blob/main/Module%204%3A%20%20Tooling%20Up%3A%20Bash%20with%20Security%20Tools/commands.md)):
+    - 22: SSH
+    - 80: HTTP
+    - 443: HTTPS
+ 
+Example Output:
+```bash
+maxz@zom:~$ nc -zv localhost 22 80 443
+localhost [127.0.0.1] 22 (ssh) open
+```
+If you followed along with [Module 5](https://www.youtube.com/watch?v=RYclAh6ZAX4&t=993s) then port 22 will already be open. If not click the link and skip to (7:40).
+
+Now, what does this output mean?
+
+- `localhost [127.0.0.1]`: Netcat resolved localhost to the IP address 127.0.0.1.
+- `22 (ssh)`: We asked it to check port 22 (SSH).
+- `open`: Netcat successfully connected.
+
+Notice how it did not mention anything about port 80, or 443. This is because they are closed. Netcat only prints output for ports that are open.
+
+---
+
+## nc -v localhost 22 🔍🖧🔐
+
+Explanation:
+- `nc`: Netcat.
+- `-v`: Verbose mode; makes netcat print connection info, error messages, or service banners (if any).
+- `localhost`: This is the target we are trying to connect to.
+- `22`: TCP port number we are targeting. Port 22 is the default port for SSH.
+
+Example Output:
+```bash
+maxz@zom:~$ nc -v localhost 22
+localhost [127.0.0.1] 22 (ssh) open
+SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u6
+```
+As we know already, `localhost [127.0.0.1] 22 (ssh) open` means that the connection was successful.
+
+The next line, `SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u6` is called a banner. This is the banner sent by the SSH server. What does this mean?
+
+- `SSH-2.0`: It speaks SSH version 2.
+- `OpenSSH`: The software handling the connection is OpenSSH. We did this in Module 5.
+- `9.2p1`: This is the version.
+- `Debian-2+deb12u6`: This tells us it is a Debian machine.
+
+---
+
+## Multi IP Port-Scanner 🌐🛠️📊
+
+First create a seperate file in the same directory and call it something like `ips.txt`. Then write the following IP addresses in:
+```
+127.0.0.1
+8.8.8.8
+1.1.1.1
+```
+- 127.0.0.1 - Loopback IP, or localhost IP. This is us.
+- 8.8.8.8 - Google public DNS.
+- 1.1.1.1 - Cloudflare public DNS.
+
+We then create a new executable file, name it something relevant then write the following script:
+```bash
+#!/bin/bash
+for ip in $(cat ips.txt); do
+  nc -zv $ip 22 80 443 >> scan_results.txt
+done
+```
+Explanation:
+- `#!/bin/bash`: Shebang. Tells the system to run the script using Bash.
+
+- `for ip in $(cat ips.txt); do`: This loops over each IP in the `ips.txt` file.
+
+- `cat ips.txt`: Outputs the list of IPs (Module 5).
+
+- `$(...)`: Command substitution as we know already. In this case it replaces with the output of cat instead of dumping it.
+
+- `ip`: Variable holding the current IP in the loop
+
+- `nc -zv $ip 22 80 443`: scan ports 22, 80, and 443 on the current IP
+
+- `>> scan_results.txt`: Append the scan output to scan_results.txt. If you are wondering why there is two `>>` instead of one `>`. This is because the double greater-than symbol `>>` means:
+
+Append the output to the file.
+
+Whereas a single `>` means:
+
+Overwrite the file with new output.
+
+- `done`: Ends the for loop (Module 3).
+
+---
+
+## traceroute google.com 📍🗺️
+
+Explanation: Shows each hop (router) between you and google.com, which helps diagnose network routing issues in a network.
+
+Example Output:
+```bash
+maxz@zom:~$ traceroute google.com
+traceroute to google.com (142.250.187.238), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.226.2)  0.089 ms  0.049 ms  0.062 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+```
+The first line shows the route and that we have successfully pinged the address.
+
+The asterisks mean no response. Becuase the request has went through already, there is no more response.
+
+Awesome.
