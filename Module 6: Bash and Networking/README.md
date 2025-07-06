@@ -2,7 +2,7 @@
 
 The documents in this folder are here to accompany the Module 6 content.
 
-This module introduces the use of Bash as a tool for basic network testing, service discovery, and scanning. You’ll learn how to use built-in and lightweight tools like ping, curl, and netcat to check connectivity, identify open ports, and interact with remote services. We will also be building a new script that scans certain IP addresses and specified ports.
+This module introduces the use of Bash as a tool for basic network testing, service discovery, and scanning. You’ll learn how to use built-in and lightweight tools like `ping`, `curl`, and `netcat` to check connectivity, identify open ports, and interact with remote services. We will also be building a new script that scans certain IP addresses and specified ports.
 
 🎥 Watch Module 6 Here: COMING
 
