@@ -31,4 +31,4 @@ By the end of this module, you should be able to:
 
 ## 🚀 Next Up
 
-Head to MODULE 6 to learn about COMING!
+Head to [Module 6](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%206%3A%20Bash%20and%20Networking) to learn about using Bash for networking!
