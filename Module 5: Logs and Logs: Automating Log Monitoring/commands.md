@@ -1,7 +1,5 @@
 # 📖 List of Commands used in Module 5: Logs and Logs: Automating Log Monitoring
 
----
-
 ## sudo journalctl -n 50 📘🔎
 
 Explanation: This command will display the last 50 lines of system activity.
