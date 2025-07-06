@@ -20,6 +20,7 @@ Each module has:
 - [Module 3: Variables, Loops, and Conditionals](./Module%203:%20Variables,%20Loops,%20and%20Conditionals:%20Building%20Logic%20for%20Defense/)
 - [Module 4: Tooling Up: Bash With Security Tools](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%204%3A%20%20Tooling%20Up%3A%20Bash%20with%20Security%20Tools)
 - [Module 5: Logs and Logs: Automating Log Monitoring](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%205%3A%20Logs%20and%20Logs%3A%20Automating%20Log%20Monitoring)
+- [Module 6: Bash and Networking](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%206%3A%20Bash%20and%20Networking)
 - ... (coming soon...)
 
 ## 📬 Contact
