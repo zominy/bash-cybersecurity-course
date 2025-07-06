@@ -1,9 +1,5 @@
 # 📖 List of Commands used in Module 5: Logs and Logs: Automating Log Monitoring
 
-### Introduction
-
-This is gonna be a deep dive into a crucial aspect of cybersecurity: log monitoring and log analysis. The system logs are the digital fingerprints of everything that happens on a machine. Understanding this stuff is pretty important.
-
 ---
 
 ## sudo journalctl -n 50 📘🔎
