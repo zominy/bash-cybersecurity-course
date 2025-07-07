@@ -147,12 +147,21 @@ First create a seperate file in the same directory and call it something like `i
 We then create a new executable file, name it something relevant then write the following script:
 ```bash
 #!/bin/bash
+
+timestamp=$(date +%F)
+
+mkdir -p scans
+
 for ip in $(cat ips.txt); do
-  nc -zv $ip 22 80 443 >> scan_results.txt
+  nc -zv $ip 22 80 443 >> scans/scan_results_$timestamp.txt 2>&1
 done
 ```
 Explanation:
 - `#!/bin/bash`: Shebang. Tells the system to run the script using Bash.
+
+- `timestamp=$(date +%F)`: Takes the date and stores it under the variable timestamp.
+
+- `mkdir -p scans`: Creates a new directory called 'scans' if it does not already exist.
 
 - `for ip in $(cat ips.txt); do`: This loops over each IP in the `ips.txt` file.
 
@@ -164,13 +173,15 @@ Explanation:
 
 - `nc -zv $ip 22 80 443`: scan ports 22, 80, and 443 on the current IP
 
-- `>> scan_results.txt`: Append the scan output to scan_results.txt. If you are wondering why there is two `>>` instead of one `>`. This is because the double greater-than symbol `>>` means:
+- `>> scans/scan_results_$timestamp.txt`: Append the scan output to scans/scan_results_07-07-2025.txt (example of timestamp). If you are wondering why there is two `>>` instead of one `>`. This is because the double greater-than symbol `>>` means:
 
 Append the output to the file.
 
 Whereas a single `>` means:
 
 Overwrite the file with new output.
+
+- `2>&1`: Redirects stderr (error output) to the same place as stdout (normal output). The script will not save the result of `nc -zv $ip 22 80 443` to the target file without this addition. This is because Netcat sends most of its output (like connection success/failure) to stderr, not stdout so you have to treat your ouptut as if it is an error output, this way it will send the data to the correct location.
 
 - `done`: Ends the for loop (Module 3).
 
