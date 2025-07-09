@@ -20,7 +20,7 @@ sudo apt install -y grep awk sed coreutils
 
 ---
 
-## journalctl -u ssh.service | grep "Failed password" | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' 🛡️📜🔎
+## sudo journalctl -u ssh.service | grep "Failed password" | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' 🛡️📜🔎
 
 Explanation:
 
@@ -58,7 +58,7 @@ Normally the logs will record the IPv6 address not the IPv4. You can use the reg
 
 ---
 
-## journalctl -u ssh.service | grep "Failed password" | awk '{print $(NF-5)}' 📜🧮🕵️
+## sudo journalctl -u ssh.service | grep "Failed password" | awk '{print $(NF-5)}' 📜🧮🕵️
 
 `NF`: Number of fields (words in the line).
 
@@ -86,7 +86,21 @@ Jul 09 12:22:29
 
 ---
 
-The asterisks mean no response. Becuase the request has went through already, there is no more response.
+## sudo journalctl -u ssh.service | grep "Failed password" | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq -c | sort -nr 🛡️📊📈
 
-Awesome.
+Explanation:
 
+- `sort`: Sort IPs alphabetically.
+- `uniq -c`: Count how many times each appears.
+- `sort -nr`: Sort by number, reverse (most common IPs first).
+
+Example:
+```bash
+maxz@zom:~$ sudo journalctl -u ssh.service | grep "Failed password" | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq -c | sort -nr
+[sudo] password for maxz: 
+      3 127.0.0.1
+```
+
+---
+
+Nice.
