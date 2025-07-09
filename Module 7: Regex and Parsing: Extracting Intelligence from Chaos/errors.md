@@ -1,1 +1,9 @@
+# Error Table for Module 7 👀
 
+| 🧩 Area                            | ⚠️ Error Message / Behaviour                               | ❓ Cause                                                             | ✅ Fix                                                                                  |
+|----------------------------------|-------------------------------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Installing tools                 | `E: Unable to locate package grep` (or similar)             | Package list isn’t updated                                          | Run `sudo apt update` first                                                             |
+| Using `journalctl`               | `journalctl: command not found`                             | System doesn’t use `systemd`                                        | Make sure you’re on a systemd-based distro like Ubuntu or Debian                        |
+| Grepping IP addresses            | No output from the regex command                            | Your logs only show IPv6, not IPv4                                  | Try using the combined regex for IPv4 and IPv6, or generate IPv4 entries manually       |
+| Using `awk`                      | `awk: field value not found` or prints wrong word           | Log line format doesn’t match what was expected                     | Use `$(NF-5)` instead of a fixed number like `$9` to account for variable length logs   |
+| Sorting IPs                      | Empty or weird sort output                                  | Nothing was piped in (previous command returned nothing)            | Double check the previous grep command; likely matched nothing                         |
