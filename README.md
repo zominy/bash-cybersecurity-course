@@ -21,6 +21,7 @@ Each module has:
 - [Module 4: Tooling Up: Bash With Security Tools](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%204%3A%20%20Tooling%20Up%3A%20Bash%20with%20Security%20Tools)
 - [Module 5: Logs and Logs: Automating Log Monitoring](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%205%3A%20Logs%20and%20Logs%3A%20Automating%20Log%20Monitoring)
 - [Module 6: Bash and Networking](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%206%3A%20Bash%20and%20Networking)
+- [Module 7: Regex and Parsing: Extracting Intelligence from Chaos](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%207%3A%20Regex%20and%20Parsing%3A%20Extracting%20Intelligence%20from%20Chaos)
 - ... (coming soon...)
 
 ## 📬 Contact
