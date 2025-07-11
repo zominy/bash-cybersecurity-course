@@ -103,4 +103,47 @@ maxz@zom:~$ sudo journalctl -u ssh.service | grep "Failed password" | grep -Eo '
 
 ---
 
+## The Regex and Parsing Script
+
+Here is what it looks like from the video:
+```bash
+#!/bin/bash
+echo "Extracting IPs from failed SSH logins:"
+journalctl -u ssh.service | grep "Failed password" | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq -c
+
+echo "Extracting usernames:"
+journalctl -u ssh.service | grep "Failed password" | awk '{print $(NF-5)}' | sort | uniq -c
+```
+`#!/bin/bash`: Shebang; tells the system to run this script using the Bash shell.
+
+---
+```bash
+journalctl -u ssh.service | grep "Failed password" | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq -c
+```
+This pipeline extracts and counts IP addresses from failed SSH login attempts:
+
+`journalctl -u ssh.service`: Show logs for the SSH service
+
+`grep "Failed password"`: Filter only lines with failed login attempts
+
+`grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'`: Extract the IPv4 addresses using regex
+
+`sort`: Sort the IPs so identical ones are grouped together
+
+`uniq -c`: Count how many times each IP appears
+
+---
+```bash
+journalctl -u ssh.service | grep "Failed password" | awk '{print $(NF-5)}' | sort | uniq -c
+```
+This pipeline extracts and counts usernames:
+
+Same first two commands as above
+
+`awk '{print $(NF-5)}'`: Print the username (5 fields from the end of the line).
+
+`sort` and `uniq -c` → Same idea; group and count identical usernames
+
+---
+
 Nice.
