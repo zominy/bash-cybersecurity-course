@@ -32,5 +32,5 @@ By the end of this module, you should be able to:
 
 ## 🚀 Next Up
 
-Head to MODULE 8 to learn about COMING!
+Head to [Module 8](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%208%3A%20Process%20Surveillance%3A%20Who%E2%80%99s%20Running%20What%3F) to learn about process surveillance!
 
