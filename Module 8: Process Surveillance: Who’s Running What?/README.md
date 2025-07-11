@@ -1,4 +1,4 @@
-# 🕵️‍♂️⚙️ Module 8: Process Surveillance: Who's Running What? 🟥
+# 🕵️‍♂️⚙️ Module 8: Process Surveillance: Who's Running What? 🟧
 
 The documents in this folder are here to accompany the Module 8 content.
 
