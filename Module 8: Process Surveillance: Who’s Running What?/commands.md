@@ -1,5 +1,5 @@
 
-# 📖 List of Commands used in Module 7: Regex and Parsing: Extracting Intelligence from Chaos
+# 📖 List of Commands used in Module 8: Process Surveillance: Who's Doing What?
 
 ---
 
