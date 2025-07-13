@@ -83,28 +83,38 @@ Here is the script:
 ```bash
 #!/bin/bash
 
-previous_snapshot=$(ps -e)
+original_snapshot=$(ps -e)
+timestamp=$(date +%F)
+
+mkdir -p process_scans
 
 while true; do
-    sleep 5
-    current_snapshot=$(ps -e)
-    diff <(echo "$previous_snapshot") <(echo "$current_snapshot")
-    previous_snapshot=$current_snapshot
+        sleep 5
+        fresh_snapshot=$(ps -e)
+        echo "Checking at $(date)" >> process_scans/process_log_$timestamp.txt
+        diff <(echo "$original_snapshot") <(echo "$fresh_snapshot") >> process_scans/process_log_$timestamp.txt
+        original_snapshot=$fresh_snapshot
 done
 ```
 `#!/bin/bash`: Shebang. Tells the system this is a Bash script.
 
-`previous_snapshot=$(ps -e)`: Stores the current list of processes. The `ps -e` command only displays default columns: `PID`, `TTY`, `TIME`, `COMMAND`. It excludes things like memory usage and CPU usage etc.
+`original_snapshot=$(ps -e)`: Stores the current list of processes. The ps -e command only displays default columns: PID, TTY, TIME, COMMAND. It excludes things like memory usage and CPU usage etc.
 
-`while true; do`: This is a while loop. In this case, it starts an infinite loop that mimics how the `watch` command works. Except there is 5 second intervals.
+`timestamp=$(date +%F)`: Stores the current date under the variable 'timestamp'.
+
+`mkdir -p process_scans`: Creates a new directory if it does not already exist. This is where the files will be stored.
+
+`while true; do`: This is a while loop. In this case, it starts an infinite loop that mimics how the watch command works. Except there is 5 second intervals.
 
 `sleep 5`: Waits 5 seconds between checks. Also necessary to not overload the output.
 
-`current_snapshot=$(ps -e)`: Gets the updated list of processes. 
+`fresh_snapshot=$(ps -e)`: Gets the updated list of processes.
 
-`diff <(echo "$previous_snapshot") <(echo "$current_snapshot")`: Shows the difference between old and new process lists.
+`echo "Checking at $(date)"` >> process_scans/process_log_$timestamp.txt: Appends a timestamped line to the log file every time the check runs, so you know when each snapshot was taken.
 
-`previous_snapshot=$current_snapshot`: Updates the snapshot for the next loop.
+`diff <(echo "$original_snapshot") <(echo "$fresh_snapshot") >> process_scans/process_log_$timestamp.txt`: Compares the previous process snapshot to the current one. Any differences; such as new processes starting or existing ones ending, are written to the log file. The use of `<(echo "$...")` is called process substitution, allowing diff to compare outputs directly.
+
+`original_snapshot=$fresh_snapshot`: Updates the reference snapshot so that in the next loop iteration, we compare against the most recent process state instead of the original one. This keeps the log current and relevant.
 
 `done`: This marks the end of the while loop (like in for loops). The script will jump back to the while true condition (infinite loop).
 
