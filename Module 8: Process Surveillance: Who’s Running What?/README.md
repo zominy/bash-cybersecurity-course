@@ -4,7 +4,7 @@ The documents in this folder are here to accompany the Module 8 content.
 
 This lab introduces basic process surveillance techniques on Linux systems. We will use command-line tools to monitor running processes in real-time, detect suspicious activities (like unauthorised nc listeners), and log new processes as they appear. It emphasises practical skills for early threat detection and system monitoring.
 
-🎥 Watch Module 8 Here: COMING
+🎥 Watch Module 8 Here: [Watch](https://www.youtube.com/watch?v=gvZI0jvB_4M&t=636s)
 
 ---
 
