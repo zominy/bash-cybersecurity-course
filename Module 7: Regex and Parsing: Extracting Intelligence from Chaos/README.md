@@ -1,11 +1,13 @@
 
 # 🔡🕵️ Module 7: Regex and Parsing: Extracting Intelligence from Chaos 🟧
 
+Pronounced: 'reh-jex'
+
 The documents in this folder are here to accompany the Module 7 content.
 
 In this module, you’ll use Bash with tools like `grep`, `awk`, `cut`, and `sed` to dig through log files and spot useful info like IPs and failed login attempts. You’ll get hands-on with regex and build a simple script to pull out key details for basic log analysis.
 
-🎥 Watch Module 7 Here: COMING
+🎥 Watch Module 7 Here: [Watch](https://www.youtube.com/watch?v=Mmm5vhzCYo0)
 
 ---
 
