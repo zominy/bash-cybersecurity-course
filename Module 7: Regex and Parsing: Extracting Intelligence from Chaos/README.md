@@ -1,7 +1,7 @@
 
 # 🔡🕵️ Module 7: Regex and Parsing: Extracting Intelligence from Chaos 🟧
 
-Pronounced: 'reh-jex'
+It's pronounced: 'reh-jex'
 
 The documents in this folder are here to accompany the Module 7 content.
 
