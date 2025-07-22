@@ -30,5 +30,5 @@ This lab introduces basic process surveillance techniques on Linux systems. We w
 
 ## 🚀 Next Up
 
-Head to MODULE 9 to learn about COMING!
+Head to [Module 9](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%209%3A%20Crontab%20and%20Scheduled%20Tasks%3A%20Set%20It%20and%20Forget%20It) to learn about crontab and scheduling!
 
