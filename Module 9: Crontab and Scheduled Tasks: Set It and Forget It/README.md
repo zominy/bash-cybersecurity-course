@@ -4,7 +4,7 @@ The documents in this folder are here to accompany the Module 9 content.
 
 This lab introduces scheduling techniques using `crontab` on Linux systems. You'll learn how to set up recurring tasks like system scans or disk usage reports. The goal is to automate essential maintenance or alert tasks, which is crucial for proactive system monitoring and management.
 
-🎥 **Watch Module 9 Here**: COMING
+🎥 **Watch Module 9 Here**: [Watch](https://www.youtube.com/watch?v=5p59foEV7pA&t=309s)
 
 ---
 
