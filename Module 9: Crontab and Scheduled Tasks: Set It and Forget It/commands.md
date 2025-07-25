@@ -19,7 +19,7 @@ sudo apt install -y cron
 
 ---
 
-# sudo systemctl enable cron
+# sudo systemctl enable cron 🔌🛠️
 
 Explanation: This command enables the cron service to automatically start every time the system boots.
 
@@ -33,13 +33,13 @@ maxz@zom:~$
 
 ---
 
-# sudo systemctl start cron
+# sudo systemctl start cron ▶️🚀
 
 Explanation: This command starts the cron service right now without needing to reboot.
 
 ---
 
-# sudo systemctl status cron
+# sudo systemctl status cron 📊🔍
 
 Explanation: This command shows detailed information about the cron service, such as:
 - Whether it's active (running), inactive, or failed.
@@ -68,7 +68,7 @@ Jul 25 18:02:09 zom cron[614]: (CRON) INFO (Running @reboot jobs)
 
 ---
 
-# df -h > /home/$USER/disk_report.txt
+# df -h > /home/$USER/disk_report.txt 💾📂
 
 The next step in the video is to create a script (this is the script we will be scheduling).
 
@@ -95,13 +95,13 @@ Note: When running the script and getting no output try using `/usr/bin/df -h`.
 
 ---
 
-# crontab -e
+# crontab -e ✏️📆
 
 Explantion: This command opens your personal crontab file (you will be able to choose either vim or nano, in the video I chose vim because we have done a lot of work with nano. However, feel free to choose whichever you prefer). You can add lines to define when and what command to run.
 
 ---
 
-# 0 8 * * * /home/maxz/disk_script.sh
+# 0 8 * * * /home/maxz/disk_script.sh ⏰📜
 
 Here is how crontab reads this line:
 
@@ -137,7 +137,7 @@ So:
 
 ---
 
-#### How do we input this in vim?
+#### How do we input this in vim? 👨‍💻
 
 Open the crontab editor:
 ```bash
@@ -159,7 +159,7 @@ You will see a new line saying: `crontab: installing new crontab` once saving.
 
 ---
 
-# crontab -l
+# crontab -l 📋🧾
 
 Explanation: This command lists all current cron jobs for the current user. An example output would look like this:
 
