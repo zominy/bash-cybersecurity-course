@@ -1,4 +1,4 @@
-# 💻🌐 Module 6: Bash and Networking 🟧
+# 💻🌐 Module 6: Bash and Networking 🟩
 
 The documents in this folder are here to accompany the Module 6 content.
 
