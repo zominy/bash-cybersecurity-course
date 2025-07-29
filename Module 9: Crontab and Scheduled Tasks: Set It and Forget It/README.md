@@ -29,4 +29,4 @@ This lab introduces scheduling techniques using `crontab` on Linux systems. You'
 
 ## 🚀 Next Up
 
-Head to **MODULE 10** to learn about **COMING!**
+Head to [Module 10](https://github.com/zominy/bash-cybersecurity-course/tree/main/xModule%2010%3A%20API-Driven%20Security%20Monitoring%3A%20Curl'd%20Up%20in%20API%20Drama) to learn about **API-driven security monitoring!**
