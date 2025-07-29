@@ -1,4 +1,4 @@
-# 🔁💡 Module 3: Variables, Loops, and Conditionals: Building Logic for Defense 🟩
+# 🔁💡 Module 3: Variables, Loops, and Conditionals: Building Logic for Defense 🟧
 
 The documents in this folder are here to accompany the module 3 content.
 
