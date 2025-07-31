@@ -25,6 +25,7 @@ Each module has:
 - [Module 8: Process Surveillance: Who's Running What?](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%208%3A%20Process%20Surveillance%3A%20Who%E2%80%99s%20Running%20What%3F)
 - [Module 9: Crontab and Scheduled Tasks: Set It and Forget It](https://github.com/zominy/bash-cybersecurity-course/tree/main/Module%209%3A%20Crontab%20and%20Scheduled%20Tasks%3A%20Set%20It%20and%20Forget%20It)
 - [Module 10: API-Driven Security Monitoring: Curl'd Up in API Drama](https://github.com/zominy/bash-cybersecurity-course/tree/main/xModule%2010%3A%20API-Driven%20Security%20Monitoring%3A%20Curl'd%20Up%20in%20API%20Drama)
+- [Module 11: Offensive Bash: Writing a Simple Recon Script](https://github.com/zominy/bash-cybersecurity-course/tree/main/xModule%2011%3A%20Offensive%20Bash%3A%20Writing%20a%20Simple%20Recon%20Script)
 - ... (coming soon...)
 
 ## 📬 Contact
