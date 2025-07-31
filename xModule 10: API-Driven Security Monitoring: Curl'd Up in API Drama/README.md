@@ -37,5 +37,5 @@ In the video, you’ll walk through building a Bash script that:
 
 ## 🚀 Next Up
 
-Head to **Module 11** to learn about **COMING**
+Head to [Module 11](https://github.com/zominy/bash-cybersecurity-course/tree/main/xModule%2011%3A%20Offensive%20Bash%3A%20Writing%20a%20Simple%20Recon%20Script) to learn about simple recon.
 
