@@ -1,4 +1,4 @@
-# Module 11: Offensive Bash: Writing a Simple Recon Script 📋🟩
+# 📋💎 Module 11: Offensive Bash: Writing a Simple Recon Script 🟩
 
 The documents in this folder accompany the Module 11 content.
 
