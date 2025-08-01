@@ -1,4 +1,4 @@
-# 🛡️⚙️ Module 12: Defensive Bash: Build Your Own IDS Lite 📊
+# 🛡️⚙️ Module 12: Defensive Bash: Build Your Own IDS Lite 🟥
 
 This module brings together everything you've learned so far; parsing, logging, thresholds, and alerting to build a lightweight intrusion detection system (IDS) entirely in Bash.
 
