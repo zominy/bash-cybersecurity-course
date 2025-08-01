@@ -1,1 +1,10 @@
+# Error Table for Module 10 🔗
 
+| 🧩 What You’re Doing                    | ⚠️ What Goes Wrong                                      | ❓ Why It Happens                                                 | ✅ How To Fix It                                                                 |
+|----------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| Running the script                     | `jq: command not found`                                  | `jq` isn’t installed on the system                               | Install it with `sudo apt install jq`                                           |
+| Running the script                     | `curl: command not found`                                | `curl` isn’t installed                                            | Install it with `sudo apt install curl`                                         |
+| Using your API key                     | You get a 403 or invalid key message                     | The API key is wrong or has been revoked                         | Double check the key and regenerate it on AbuseIPDB if needed                   |
+| Parsing the response with `jq`         | You get `null` or empty output                           | The structure of the JSON isn’t quite what you expected          | Use `jq .` on the raw output to inspect the full layout before filtering         |
+| Forgetting to use double quotes        | You get weird syntax errors or broken output             | Variables with spaces or special characters break the command    | Wrap your variables in double quotes like `"$SCORE"`                              |
+| Hitting the rate limit on the API      | The API stops responding or gives you a warning          | AbuseIPDB has a limit if you’re using the free plan              | Wait a bit, reduce frequency, or upgrade your account                           |
