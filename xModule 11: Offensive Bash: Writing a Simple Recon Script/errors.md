@@ -1,1 +1,11 @@
+# Error Table for Module 11 🤦‍♂️
 
+| 🧩 What You’re Doing                    | ⚠️ What Goes Wrong                                      | ❓ Why It Happens                                                 | ✅ How To Fix It                                                                 |
+|----------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| Running the script                     | `nmap: command not found`                                | `nmap` isn’t installed on your machine                           | Install it with `sudo apt install nmap`                                         |
+| Using `find`                           | Permission denied errors flood the output                | You’re not root and some directories are restricted               | Add `2>/dev/null` to suppress those errors                                      |
+| Running the script                     | Nothing prints, or the output is broken                  | You forgot to make the script executable                         | Run `chmod +x recon.sh` and try again                                          |
+| Running with `./recon.sh`             | `command not found` or `permission denied`               | You’re not in the right directory or forgot to mark it executable| Use `chmod +x`, or run it as `bash recon.sh`                                   |
+| Using `ps` with sort                   | Sort doesn't seem to work                                | You left out `--sort=-%mem` or formatted it wrong                | Make sure it’s typed exactly as `--sort=-%mem`                                  |
+| Output missing usernames               | You see blank lines in the user section                  | The script uses `cut` on `/etc/passwd`, but some entries are system-level users | This is expected, it’s not broken, but just scroll past them                       |
+| Uptime shows as unknown                | The uptime or processor info shows as `unknown`          | Some virtual machines show `unknown` for `uname -p` or uptime info | This only happens on some VMs; if it occurs, consider using another machine or accept the limitation |
