@@ -16,8 +16,7 @@ It watches your system logs in real time and alerts you when patterns like brute
 2. [⚠ Possible errors and how to fix them](./errors.md)  
    A list of common issues you might face while testing or deploying the script.
 
-3. [😤Email not working? Click here for further steps](./email_config.md)
-   Steps to fix problems with the mail section of the script.
+3. 🤔For those who cannot get the `mail` section to work. Click [Here](./email_config.md)
    
 ---
 
