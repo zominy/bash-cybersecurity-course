@@ -31,10 +31,10 @@ Each module has:
 ## 📬 Contact
 - [LinkedIn](https://www.linkedin.com/in/max-zominy-85ba92310/)
 
-**🤔My Personal Evaluation of This Project:**
-- [Evaluation](./EVALUATION.md) 
+---
 
-This project is free and open to all learners!
+***My Personal Evaluation of This Project:***
+- [🤔 Evaluation](./EVALUATION.md) 
 
 ---
 
