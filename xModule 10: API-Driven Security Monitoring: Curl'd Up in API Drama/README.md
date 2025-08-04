@@ -11,7 +11,7 @@ In the video, you’ll walk through building a Bash script that:
 - Parses the response with `jq`
 - Outputs a colour-coded risk score for quick triage
 
-🎥 **Watch Module 10 Here**: [Watch](https://www.youtube.com/watch?v=8A4n1lwCUjA)
+🎥 **Watch Module 10 Here**: [Watch](https://www.youtube.com/watch?v=GNA-I-esOsE)
 
 ---
 
