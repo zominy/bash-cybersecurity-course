@@ -15,5 +15,5 @@
 | Weird file names in the reports folder      | Filenames have colons or look broken                           | Timestamps with colons (`:`) mess with some file systems                          | The script should fix that already but if not, replace `:` with `-` manually  |
 | System starts lagging a bit                 | High CPU or loads of log spam                                  | That `while true; sleep 1` loop runs constantly and prints every log line         | Try slowing it down, or use something like `inotify` or a log monitoring tool |
 
-Any `mail` section errors, click [here](../email_config.md)
+***🚩 Any `mail` section errors, click [here](./email_config.md) 📢***
 
