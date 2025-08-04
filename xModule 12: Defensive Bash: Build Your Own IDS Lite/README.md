@@ -4,7 +4,7 @@ This module brings together everything you've learned so far; parsing, logging, 
 
 It watches your system logs in real time and alerts you when patterns like brute-force login attempts are detected. The goal isn’t to replace tools like Fail2Ban or Snort, it’s to **build something simple, functional, and expandable** using fundamentals.
 
-🎥 **Watch Module 12 Here**: *COMING*
+🎥 **Watch Module 12 Here**: [Watch](https://www.youtube.com/watch?v=6JDRxgrRI-c)
 
 ---
 
