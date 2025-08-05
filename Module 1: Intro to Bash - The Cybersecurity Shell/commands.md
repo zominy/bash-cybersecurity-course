@@ -215,7 +215,7 @@ maxz@zom:~/Downloads$
 ```
 Breakdown:
 
-Changes into the Downloads directory - Sucessful
+Changes into the Downloads directory - Successful
 
 Prints the working directory - Successful
 
@@ -234,9 +234,9 @@ Changes into the 'External' directory - Fails (Does not exist)
 
 Echos 'When the previous command fails, the next one is executed.' - Successful
 
-Note: It executes the second command becuase the first failed.
+Note: It executes the second command because the first failed.
 
-### Example of the Command Seperator:
+### Example of the Command Separator:
 ```bash
 maxz@zom:~/Downloads$ cd; echo back home; mkdir NEW; cd NEW
 back home
