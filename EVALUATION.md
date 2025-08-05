@@ -18,7 +18,7 @@ The goal wasn’t just to learn Bash, but to teach it from the ground up. This m
 
 **🔧 Technical Skills Gained**
 
-Despite my incredible teachers who I am grateful for, I began not knowing much compared to the scope of this course. But now I can confidently say I’ve developed a solid foundation in Bash scripting and its application in security.
+Despite my incredible teachers whom I am grateful for, I began not knowing much compared to the scope of this course. But now I can confidently say I’ve developed a solid foundation in Bash scripting and its application in security.
 
 Over 12 structured modules, I learned and taught:
 
