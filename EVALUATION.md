@@ -48,7 +48,7 @@ I finished with a proper hands-on script that watches system logs live and alert
 
 **💬 Communication & Teaching**
 
-Explaining technical material to people with presumingly no background was more difficult than I expected. I had to strip back jargon and focus on clarity. Making the content digestible and enjoyable in video format took time and revision and every section had to be relevant, clear, and concise.
+Explaining technical material to people with presumingly no background was more difficult than I expected. I had to strip back jargon and focus on clarity. Making the content digestible and enjoyable in video format took time and revision and every section had to be relevant, clear, and concise. E.g. trying to stop myself from rambling on.
 
 It massively improved my technical communication and my ability to break down complex tasks into bite-sized, teachable concepts.
 
@@ -61,7 +61,7 @@ It massively improved my technical communication and my ability to break down co
 | 3      | Variables, Loops, Conditionals   | Control flow, scripting basics (least favourite module)           |
 | 4      | Bash with Security Tools         | nmap, whois, parsing outputs with grep, awk, etc.                 |
 | 5      | Automating Log Monitoring        | journalctl, grep, log parsing, scripting failed logins            |
-| 6      | Networking                       | ping, curl, nc, port scanning, connectivity testing               |
+| 6      | Bash & Networking                | ping, curl, nc, port scanning, connectivity testing               |
 | 7      | Regex and Parsing                | Regex to extract IPs, usernames from logs                         |
 | 8      | Process Surveillance             | Watching for rogue processes using Bash                           |
 | 9      | Crontab and Scheduling Tasks     | Setting up automated scans and reports                            |
@@ -84,7 +84,7 @@ Repo organisation: Tutorials, script examples, folders, logs | all included in t
 
 **⚠️ What Could Be Improved**
 
-GitHub knowledge upfront: I had to teach myself how to properly structure and publish everything, and that slowed me down.
+GitHub knowledge upfront: I had to teach myself how to properly structure and publish everything, and that slowed me down more than expected.
 
 More time scripting modules before recording: Some sections could’ve been more efficient if I’d mapped them out better first.
 
