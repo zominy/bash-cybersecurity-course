@@ -8,6 +8,27 @@ This module teaches basic commands as it aims just to try and get you comfortabl
 
 ---
 
+## 🧭 Before You Start
+
+Make sure you’ve:
+- Read the [Getting Started guide](../../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Created a folder structure where you can run the commands (e.g. a `lab1/` directory inside your home directory)
+- Opened a terminal and are ready to start
+
+🕒 **Estimated Effort:** ~20–30 minutes
+
+---
+
+## 🎯 Aims
+
+By the end of this module, you should be able to:
+- Use simple commands such as `ls`, `pwd`, and `cd` with knowledge of how they work.
+- To be able to string commands together.
+- To have knowledge of shortcuts and what they do.
+
+---
+
 ## 📚 Material for Module 1
 
 1. [📖 Commands](./commands.md)  
@@ -20,16 +41,7 @@ This module teaches basic commands as it aims just to try and get you comfortabl
 3. [⚠Possible errors and how to fix them](./errors.md)  
    A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
----
-
-## 🎯 Aims
-
-By the end of this module, you should be able to:
-- Use simple commands such as ls, pwd, and cd with knowledge of how they work.
-- To be able to string commands together.
-- To have knowledge of shortcuts and what they do.
-
----
+   ---
 
 ## 🚀 Next Up
 
