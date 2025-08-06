@@ -11,7 +11,7 @@ This module teaches basic commands as it aims just to try and get you comfortabl
 ## 🧭 Before You Start
 
 Make sure you’ve:
-- Read the [Getting Started guide](../../GETTING_STARTED.md)
+- Read the [Getting Started guide](../GETTING_STARTED.md)
 - Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
 - Created a folder structure where you can run the commands (e.g. a `lab1/` directory inside your home directory)
 - Opened a terminal and are ready to start
