@@ -28,6 +28,12 @@ Make sure you’ve:
 
 ---
 
+## 📌 Objectives
+- Monitor running processes with `ps`, `top`, and `watch`  
+- Write scripts to detect suspicious or rogue processes
+
+---
+
 ## 📚 Material for Module 8
 
 1. [📖 Commands](./commands.md)  
