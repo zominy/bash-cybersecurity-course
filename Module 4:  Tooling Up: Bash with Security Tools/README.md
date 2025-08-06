@@ -8,6 +8,28 @@ This module introduces new tools and commands used in the cybersecurity space. T
 
 ---
 
+## 🧭 Before You Start
+
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
+
+🕒 **Estimated Effort:** ~20–25 minutes
+
+---
+
+## 🎯 Aims
+
+By the end of this module, you should be able to:
+- Understand how to use nmap, netstat, and whois for network scanning and information gathering.
+- Automate common tasks by integrating these tools into scripts.
+- Store the results of commands for later analysis or processing.
+- Parse and extract relevant data from command output
+- Develop a wrapper script
+
+---
+
 ## 📚 Material for Module 4
 
 1. [📖 Commands](./commands.md)  
@@ -20,17 +42,6 @@ This module introduces new tools and commands used in the cybersecurity space. T
 
 3. [⚠Possible errors and how to fix them](./errors.md)  
    A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
-
----
-
-## 🎯 Aims
-
-By the end of this module, you should be able to:
-- Understand how to use nmap, netstat, and whois for network scanning and information gathering.
-- Automate common tasks by integrating these tools into scripts.
-- Store the results of commands for later analysis or processing.
-- Parse and extract relevant data from command output
-- Develop a wrapper script
 
 ---
 
