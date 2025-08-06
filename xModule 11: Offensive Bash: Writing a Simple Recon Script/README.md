@@ -50,4 +50,4 @@ Make sure you’ve:
 
 ## Next Up 🚀
 
-Head to **MODULE 12** to learn about **COMING**!
+Head to [Module 12](https://github.com/zominy/bash-cybersecurity-course/tree/main/xModule%2012%3A%20Defensive%20Bash%3A%20Build%20Your%20Own%20IDS%20Lite) to learn how to build an IDS!
