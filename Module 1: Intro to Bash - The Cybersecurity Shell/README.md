@@ -29,6 +29,13 @@ By the end of this module, you should be able to:
 
 ---
 
+## 📌 Objectives
+- Run and interpret basic Bash commands in the terminal  
+- Navigate directories using relative and absolute paths  
+- Set up your terminal environment for future modules
+
+---
+
 ## 📚 Material for Module 1
 
 1. [📖 Commands](./commands.md)  
