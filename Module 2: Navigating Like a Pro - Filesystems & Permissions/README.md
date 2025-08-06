@@ -11,7 +11,7 @@ This module teaches how to to confidently navigate the Linux filesystem, manage 
 ## 🧭 Before You Start
 
 Make sure you’ve:
-- Read the [Getting Started guide](../../GETTING_STARTED.md)
+- Read the [Getting Started guide](../GETTING_STARTED.md)
 - Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
 - Opened a terminal and are ready to start
 
