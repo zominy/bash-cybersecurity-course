@@ -8,14 +8,14 @@ This module introduces the use of Bash as a tool for basic network testing, serv
 
 ---
 
-## 📚 Material for Module 6
+## 🧭 Before You Start
 
-1. [📖 Commands](./commands.md)  
-   View all commands used in this lab with explanations of what they do.
-   This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
 
-2. [⚠Possible errors and how to fix them](./errors.md)  
-   A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
+🕒 **Estimated Effort:** ~20–30 minutes
 
 ---
 
@@ -26,6 +26,17 @@ By the end of this module, you should be able to:
 - Use core network tools (`ping`, `curl`, `netcat`) directly from the command line.
 - Perform basic port scanning and banner grabbing using Bash scripts.
 - Automate network scanning tasks with simple scripting logic.
+
+---
+
+## 📚 Material for Module 6
+
+1. [📖 Commands](./commands.md)  
+   View all commands used in this lab with explanations of what they do.
+   This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
+
+2. [⚠Possible errors and how to fix them](./errors.md)  
+   A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
 ---
 
