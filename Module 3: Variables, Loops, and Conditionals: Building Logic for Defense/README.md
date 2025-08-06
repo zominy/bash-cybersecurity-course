@@ -8,6 +8,27 @@ This module introduces the fundamentals of variables, loops, and conditionals, e
 
 ---
 
+## 🧭 Before You Start
+
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
+
+🕒 **Estimated Effort:** ~40-50 minutes
+
+---
+
+## 🎯 Aims
+
+By the end of this module, you should be able to:
+- Use variables freely
+- Use if statements and for loops efficiently
+- Nest loops
+- Create a simple log scanner
+  
+---
+
 ## 📚 Material for Module 3
 
 1. [📖 Commands](./commands.md)  
@@ -20,15 +41,6 @@ This module introduces the fundamentals of variables, loops, and conditionals, e
 3. [⚠Possible errors and how to fix them](./errors.md)  
    A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
----
-
-## 🎯 Aims
-
-By the end of this module, you should be able to:
-- Use variables freely
-- Use if statements and for loops efficiently
-- Nest loops
-- Create a simple log scanner
 ---
 
 ## 🚀 Next Up
