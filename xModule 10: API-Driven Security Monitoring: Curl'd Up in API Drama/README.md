@@ -15,14 +15,14 @@ In the video, you’ll walk through building a Bash script that:
 
 ---
 
-## 📚 Material for Module 10
+## 🧭 Before You Start
 
-1. [📖 Commands](./commands.md)  
-   View all commands used in this lab with explanations of what they do.  
-   This boosts your understanding and lets you repurpose the commands for other automation needs.
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
 
-2. [⚠ Possible errors and how to fix them](./errors.md)  
-   A document containing common errors encountered when testing this lab, their causes, and how to resolve them.
+🕒 **Estimated Effort:** ~40-60 minutes
 
 ---
 
@@ -32,6 +32,17 @@ In the video, you’ll walk through building a Bash script that:
 - Extract useful data with `jq`
 - Automate API lookups in Bash
 - Build visual alerts using colour-coded output
+
+---
+
+## 📚 Material for Module 10
+
+1. [📖 Commands](./commands.md)  
+   View all commands used in this lab with explanations of what they do.  
+   This boosts your understanding and lets you repurpose the commands for other automation needs.
+
+2. [⚠ Possible errors and how to fix them](./errors.md)  
+   A document containing common errors encountered when testing this lab, their causes, and how to resolve them.
 
 ---
 
