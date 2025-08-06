@@ -32,6 +32,12 @@ By the end of this module, you should be able to:
 
 ---
 
+## 📌 Objectives
+- Use regular expressions to extract data from logs  
+- Apply tools like `grep -E`, `awk`, and `cut` for text parsing
+
+---
+
 ## 📚 Material for Module 7
 
 1. [📖 Commands](./commands.md)  
