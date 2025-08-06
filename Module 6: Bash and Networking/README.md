@@ -29,6 +29,13 @@ By the end of this module, you should be able to:
 
 ---
 
+## 📌 Objectives
+- Test connectivity with `ping` and `traceroute`  
+- Perform port scans using `nc` and `nmap`  
+- Fetch and examine web headers using `curl`
+
+---
+
 ## 📚 Material for Module 6
 
 1. [📖 Commands](./commands.md)  
