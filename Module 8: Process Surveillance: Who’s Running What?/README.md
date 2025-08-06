@@ -8,14 +8,14 @@ This lab introduces basic process surveillance techniques on Linux systems. We w
 
 ---
 
-## 📚 Material for Module 8
+## 🧭 Before You Start
 
-1. [📖 Commands](./commands.md)  
-   View all commands used in this lab with explanations of what they do.
-   This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
 
-2. [⚠Possible errors and how to fix them](./errors.md)  
-   A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
+🕒 **Estimated Effort:** ~25-35 minutes
 
 ---
 
@@ -25,6 +25,17 @@ This lab introduces basic process surveillance techniques on Linux systems. We w
 - Detect potentially malicious or unauthorised processes.
 - Continuously monitor for new or unexpected processes.
 - Use Bash scripting to automate surveillance tasks.
+
+---
+
+## 📚 Material for Module 8
+
+1. [📖 Commands](./commands.md)  
+   View all commands used in this lab with explanations of what they do.
+   This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
+
+2. [⚠Possible errors and how to fix them](./errors.md)  
+   A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
 ---
 
