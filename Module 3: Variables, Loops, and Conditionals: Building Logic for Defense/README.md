@@ -32,7 +32,7 @@ By the end of this module, you should be able to:
 ## 📌 Objectives
 - Store and use variables in Bash scripts  
 - Write conditional statements (`if`, `else`)  
-- Create and use loops (`for`, `while`) for automation
+- Create and use loops (`for`) for automation (`while` touched on later)
 
 ---
 
