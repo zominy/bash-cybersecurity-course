@@ -29,6 +29,13 @@ By the end of this module, you should be able to:
   
 ---
 
+## 📌 Objectives
+- Understand Linux filesystem hierarchy and permissions  
+- Manage file ownership and permissions  
+- Locate files efficiently using `find` and `locate`
+
+---
+ 
 ## 📚 Material for Module 2
 
 1. [📖 Commands](./commands.md)  
