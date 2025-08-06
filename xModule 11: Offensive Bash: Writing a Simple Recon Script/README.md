@@ -17,14 +17,14 @@ In the video, you’ll walk through building a Bash script that:
 
 ---
 
-## 📚 Material for Module 11
+## 🧭 Before You Start
 
-1. [📖 Commands](./commands.md)  
-   A breakdown of every section of the script with explanations.  
-   Use this as a reference or starting point for expanding your own recon tools.
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
 
-2. [⚠ Possible errors and how to fix them](./errors.md)  
-   A list of common mistakes (like missing tools or permission errors) and how to resolve them.
+🕒 **Estimated Effort:** ~20–25 minutes
 
 ---
 
@@ -34,6 +34,17 @@ In the video, you’ll walk through building a Bash script that:
 - Write clean, readable, and modular Bash scripts
 - Automate basic enumeration tasks
 - Create a base tool you can build on for deeper recon and analysis
+
+---
+
+## 📚 Material for Module 11
+
+1. [📖 Commands](./commands.md)  
+   A breakdown of every section of the script with explanations.  
+   Use this as a reference or starting point for expanding your own recon tools.
+
+2. [⚠ Possible errors and how to fix them](./errors.md)  
+   A list of common mistakes (like missing tools or permission errors) and how to resolve them.
 
 ---
 
