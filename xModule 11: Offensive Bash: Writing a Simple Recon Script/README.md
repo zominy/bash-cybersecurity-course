@@ -37,6 +37,12 @@ Make sure you’ve:
 
 ---
 
+## 📌 Objectives
+- Build basic recon scripts for ethical hacking and CTFs  
+- Gather system and network information programmatically  
+
+---
+
 ## 📚 Material for Module 11
 
 1. [📖 Commands](./commands.md)  
