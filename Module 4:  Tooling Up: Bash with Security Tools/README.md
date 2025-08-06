@@ -30,6 +30,13 @@ By the end of this module, you should be able to:
 
 ---
 
+## 📌 Objectives
+- Use common security tools (`nmap`, `whois`, `netstat`)  
+- Capture and parse command output with `grep`, `awk`, and `sed`
+
+---
+
+
 ## 📚 Material for Module 4
 
 1. [📖 Commands](./commands.md)  
