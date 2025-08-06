@@ -29,6 +29,13 @@ Make sure you’ve:
 
 ---
 
+## 📌 Objectives
+- Analyse logs for intrusion detection  
+- Write scripts to alert on suspicious activity  
+- Automate security monitoring and reporting
+
+---
+
 ## 📚 Material for Module 12
 
 1. [📖 Commands](./commands.md)  
