@@ -35,6 +35,12 @@ Make sure you’ve:
 
 ---
 
+## 📌 Objectives
+- Use `curl` and APIs to retrieve threat intelligence  
+- Parse JSON data with `jq` for analysis
+
+---
+
 ## 📚 Material for Module 10
 
 1. [📖 Commands](./commands.md)  
