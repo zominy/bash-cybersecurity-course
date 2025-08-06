@@ -27,6 +27,12 @@ Make sure you’ve:
 
 ---
 
+## 📌 Objectives
+- Schedule automated tasks and scripts with `crontab`  
+- Create recurring system scans and report generation
+
+---
+
 ## 📚 Material for Module 9
 
 1. [📖 Commands](./commands.md)  
