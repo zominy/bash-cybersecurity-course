@@ -1,6 +1,6 @@
 # 📘 Project Evaluation: Bash from Scratch to IDS
 
-Project Date of Completion: 4th August 2025
+Project Date of Completion: 6th August 2025
 
 Level: Completed after Year 1 of BEng (Hons) Cybersecurity (HNC)
 
