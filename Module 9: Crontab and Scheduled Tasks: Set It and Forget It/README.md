@@ -8,14 +8,14 @@ This lab introduces scheduling techniques using `crontab` on Linux systems. You'
 
 ---
 
-## 📚 Material for Module 9
+## 🧭 Before You Start
 
-1. [📖 Commands](./commands.md)  
-   View all commands used in this lab with explanations of what they do.  
-   This boosts your understanding and lets you repurpose the commands for other automation needs.
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
 
-2. [⚠ Possible errors and how to fix them](./errors.md)  
-   A document containing common errors encountered when testing this lab, their causes, and how to resolve them.
+🕒 **Estimated Effort:** ~10-20 minutes
 
 ---
 
@@ -24,6 +24,17 @@ This lab introduces scheduling techniques using `crontab` on Linux systems. You'
 - Understand the structure and syntax of `cron` scheduling.  
 - Learn how to schedule scripts or tasks using `crontab -e`.  
 - Practice creating a disk usage report that runs automatically.
+
+---
+
+## 📚 Material for Module 9
+
+1. [📖 Commands](./commands.md)  
+   View all commands used in this lab with explanations of what they do.  
+   This boosts your understanding and lets you repurpose the commands for other automation needs.
+
+2. [⚠ Possible errors and how to fix them](./errors.md)  
+   A document containing common errors encountered when testing this lab, their causes, and how to resolve them.
 
 ---
 
