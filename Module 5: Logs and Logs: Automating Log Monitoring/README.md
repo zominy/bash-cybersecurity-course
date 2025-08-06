@@ -29,6 +29,12 @@ By the end of this module, you should be able to:
 
 ---
 
+## 📌 Objectives
+- Read and interpret system logs using `journalctl` and `grep`  
+- Write scripts to automate scanning for failed login attempts
+
+---
+
 ## 📚 Material for Module 5
 
 1. [📖 Commands](./commands.md)  
