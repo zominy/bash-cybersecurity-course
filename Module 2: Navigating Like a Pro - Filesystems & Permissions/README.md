@@ -8,6 +8,27 @@ This module teaches how to to confidently navigate the Linux filesystem, manage 
 
 ---
 
+## 🧭 Before You Start
+
+Make sure you’ve:
+- Read the [Getting Started guide](../../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
+
+🕒 **Estimated Effort:** ~20–30 minutes
+
+---
+
+## 🎯 Aims
+
+By the end of this module, you should be able to:
+- Navigate the Linux filesystem with confidence
+- View and modify file permissions
+- Change file ownership
+- Use tools like `find` to efficiently search for files.
+  
+---
+
 ## 📚 Material for Module 2
 
 1. [📖 Commands](./commands.md)  
@@ -20,15 +41,6 @@ This module teaches how to to confidently navigate the Linux filesystem, manage 
 3. [⚠Possible errors and how to fix them](./errors.md)  
    A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
----
-
-## 🎯 Aims
-
-By the end of this module, you should be able to:
-- Navigate the Linux filesystem with confidence
-- View and modify file permissions
-- Change file ownership
-- Use tools like `find` to efficiently search for files.
 ---
 
 ## 🚀 Next Up
