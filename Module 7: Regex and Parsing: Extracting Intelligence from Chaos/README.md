@@ -11,14 +11,14 @@ In this module, you’ll use Bash with tools like `grep`, `awk`, `cut`, and `sed
 
 ---
 
-## 📚 Material for Module 7
+## 🧭 Before You Start
 
-1. [📖 Commands](./commands.md)  
-   View all commands used in this lab with explanations of what they do.
-   This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
 
-2. [⚠Possible errors and how to fix them](./errors.md)  
-   A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
+🕒 **Estimated Effort:** ~35-45 minutes
 
 ---
 
@@ -29,6 +29,17 @@ By the end of this module, you should be able to:
 - Use tools like `grep`, `awk`, `cut`, and `sed` to extract useful data.
 - Apply regular expressions to identify patterns in log files.
 - Write simple Bash scripts to automate log parsing and analysis
+
+---
+
+## 📚 Material for Module 7
+
+1. [📖 Commands](./commands.md)  
+   View all commands used in this lab with explanations of what they do.
+   This is to help your understanding and helps increase flexibilty where you can use these commands in other instances.
+
+2. [⚠Possible errors and how to fix them](./errors.md)  
+   A document containing all the errors I could find when testing the lab, what causes them, and how to fix them.
 
 ---
 
