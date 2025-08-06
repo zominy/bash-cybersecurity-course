@@ -8,16 +8,15 @@ It watches your system logs in real time and alerts you when patterns like brute
 
 ---
 
-## 📚 Material for Module 12
+## 🧭 Before You Start
 
-1. [📖 Commands](./commands.md)  
-   Explanations of the key parts of the script: how it detects brute force patterns, manages thresholds, and sends alerts.
+Make sure you’ve:
+- Read the [Getting Started guide](../GETTING_STARTED.md)
+- Booted into a **Debian-based** Linux distro (e.g. Kali Linux or Ubuntu)
+- Opened a terminal and are ready to start
 
-2. [⚠ Possible errors and how to fix them](./errors.md)  
-   A list of common issues you might face while testing or deploying the script.
+🕒 **Estimated Effort:** ~1h-1h:30 minutes
 
-3. 🤔For those who cannot get the `mail` section to work. Click [Here](./email_config.md)
-   
 ---
 
 ## 🎯 Aims
@@ -27,6 +26,18 @@ It watches your system logs in real time and alerts you when patterns like brute
 - Trigger alerts when thresholds are crossed
 - Build and customise your own alerting workflow (email, terminal, webhook, etc.)
 - Expand your Bash scripting with real-world defensive use cases
+
+---
+
+## 📚 Material for Module 12
+
+1. [📖 Commands](./commands.md)  
+   Explanations of the key parts of the script: how it detects brute force patterns, manages thresholds, and sends alerts.
+
+2. [⚠ Possible errors and how to fix them](./errors.md)  
+   A list of common issues you might face while testing or deploying the script.
+
+3. 🤔For those who cannot get the `mail` section to work. Click [Here](./email_config.md)
 
 ---
 
