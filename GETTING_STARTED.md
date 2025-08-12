@@ -57,13 +57,13 @@ This course is designed to work best on **Debian-based distros**.
 
 I recommend:
 
-### ✅ Kali Linux (Best for Cybersecurity Focus)
+### 🥇 Kali Linux (Best for Cybersecurity Focus)
 
 - Comes preinstalled with security tools
 - Great for later modules
 - Download here: [https://www.kali.org/get-kali/](https://www.kali.org/get-kali/)
 
-### ✅ Ubuntu (Best for Beginners)
+### 🥈 Ubuntu (Best for Beginners)
 
 - Clean and user-friendly interface
 - Easier if you’re brand new to Linux
